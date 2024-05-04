@@ -1,7 +1,7 @@
-                           Control flow
-  Conditional flow                             Iterative flow
-  1.if                                         1.for loop
-  2.if else                                    2.while loop
-  3.Swich case                                 3.Do while 
-  4.Ternary                                    4. for (of)
-                                               5.for (in)
+                                    Control flow
+  Conditional flow               Iterative flow               Array supporting methods
+  1.if                            1.for loop                 1.[].map()
+  2.if else                       2.while loop               2.[].forEach
+  3.Swich case                    3.Do while                 3.[].reduce
+  4.Ternary                       4. for (of)                4.[].filter
+                                  5.for (in)
