@@ -8,4 +8,36 @@
 -Gruop of property as one entity (property and : value).        }
 -Gruop of data & function - object
 -JS object indexing slicing is not possible
-- JS object - not iterable object  
+- JS object - not iterable object 
+=========================================================================================================================================
+
+
+Array Method :-
+----------------
+
+Class Array{
+    Length;
+                          Class- Template to Construct object 
+    push(){
+
+    }
+
+      Pop(){
+
+    }
+
+    Shift(){
+
+    }
+
+    Unshift(){
+
+    }
+
+    Indexof(){
+        
+    }
+}
+                                  
+
+                                  
