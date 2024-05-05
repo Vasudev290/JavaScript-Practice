@@ -1,0 +1,11 @@
+//let emp {                                                 let size = [38,39,40,41,42, ]
+    id:101                                                    -  array contains Single value
+    name:vasu                                                 -  JS Array allwed dulicate and heterogeneous value         
+    sal:55000                                                 - JS Array values are based indexing hence indexing and slicing possible  
+}                                                             - JS Array is iterable object 
+-this kind syntex is an object..                              - for (s od size){
+-Group of key and value as one entity-js object.                console.log(s);
+-Gruop of property as one entity (property and : value).        }
+-Gruop of data & function - object
+-JS object indexing slicing is not possible
+- JS object - not iterable object  
