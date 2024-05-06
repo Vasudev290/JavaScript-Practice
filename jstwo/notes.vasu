@@ -40,4 +40,54 @@ Class Array{
 }
                                   
 
-                                  
+  Normal function and fat arrow function sample ...
+
+  normal function                         fat arrow
+-------------------                      --------------
+  function add (){                        let add = ()=>{
+    console.log("addition")               console.log("addition")
+  }                                       }
+  add()                                    add()
+
+========================================================================================
+
+  function add (a,b){                        let add = (a,b)=>{
+    console.log("addition", a+b)               console.log("addition", a+b)
+  }                                       }
+  add(5,6)                                    add(5,6)
+
+
+==========================================================================================
+
+function add (){                        let add = ()=> a+b
+    Return a+b                           add(5,6)
+  }                                 =============================   
+  add(5,6)                                    
+                                          let add = (a,b)=>{
+                                            Return(5,6)
+                                          }
+                                          add(5,6)
+
+Fat arrow adv:
+1. Consice code / Shoter code
+2. Implicit Return  -if your function has only Return statement you can use Implicit Return
+3. this keyword   - Return minimal object
+4. Fat arrow function reslove - function override conflicts      
+
+
+This keyword - this is keyword, pointing to current object.
+
+
+function                             fatarrow                            Implicit Return
+---------                            --------                            ---------------
+
+function message(msg){       function message(msg)=>{              let message = msg => "Hello" + msg
+  Return"Hello" + msg         Return"Hello" + msg   
+}                              }                                     let result = message("GM")
+
+let result = message("GM")     let result = message("GM")            console.log(result)
+console.log(result)            console.log(result)
+                                                                       output: Hello GM  
+output: Hello GM                output: Hello GM            
+
+Note: If function has only one statement is Return we use, fat arrow implicit return.
