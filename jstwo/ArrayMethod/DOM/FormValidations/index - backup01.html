@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+</head>
+<body onsubmit="return Validation()">
+    <h1>Registration Form</h1>
+    <form>
+        <label for="">User name</label>
+        <input type="text" id="Username"> <br>
+        <input type="submit">
+    </form>
+    
+</body>
+<script>
+    function Validation() {
+        let tag_Ref = document.getElementById('Username');
+        console.log(tag_Ref);
+        let name = document.getElementById("Username").value;
+        console.log(name);
+        if(name == "") {
+            alert("Please enter User Name");
+        }
+        return false
+       
+    }
+</script>
+</html>

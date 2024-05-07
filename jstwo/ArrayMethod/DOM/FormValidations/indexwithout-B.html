@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form onsubmit="return Validate()">
+        <label for="">User name</label>
+        <input type="text" id="UserName"> <br/>
+        <span id="msg" style="color: orangered;"></span> <br/>
+        <label for="">Email</label>
+        <input type="email" id="userEmail"/> <br/>
+        <span id="emailmsg" style="color: orangered;"></span> <br/>
+        <label for="">password</label>
+        <input type="password" id="userpassword"/> <br/>
+        <span id="passwordmsg" style="color: red;"></span> <br/>
+        <input type="submit" value="Registration"/>
+    </form>
+    
+</body>
+<script>
+    function Validate() {
+       let name = document.getElementById("UserName").value;
+       let email = document.getElementById("userEmail").value;
+       let password = document.getElementById("userpassword").value;
+
+      
+       if(name =="") {
+                 document.getElementById("msg").innerHTML = "Please enter User name"
+             /* let get_Ref = document.getElementById("msg");
+             console.log(get_Ref); */
+             return false;
+       }
+       if(name.length < 6) {
+        document.getElementById("msg").innerHTML = "Min 6 Charaters"
+        return false;
+       }
+
+       if(email == "") {
+        document.getElementById("emailmsg").innerHTML = "Please enter emil"
+        return false;
+       }
+
+       if(password == "" || password.length < 6) {
+        document.getElementById("passwordmsg").innerHTML = "Please enter valid password & min 6 charaters"
+        return false;
+       }
+        
+       
+    }
+</script>
+</html>
