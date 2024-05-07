@@ -1,3 +1,5 @@
+
+
 let employee = [{"id":1,"first_name":"Leonhard","last_name":"Simao","email":"lsimao0@blogtalkradio.com","gender":"Male"},
 {"id":2,"first_name":"Alexi","last_name":"Brosoli","email":"abrosoli1@alibaba.com","gender":"Female"},
 {"id":3,"first_name":"Leta","last_name":"Sorensen","email":"lsorensen2@spiegel.de","gender":"Genderfluid"},
@@ -504,11 +506,11 @@ function displayData() {
     for(emp of employee){
         row = row + `<tr> 
                         <td>${emp.id}</td>
-                        <td>${emp.first_name}</td>
-                        <td>${emp.last_name}</td>
+                        <td>${emp.first_name.toUpperCase()}</td>
+                        <td>${emp.last_name.toLowerCase()}</td>
                         <td>${emp.email}</td>
                         <td>${emp.gender}</td>
                     </tr>`
     }
-    document.getElementById('vasu').innerHTML = row
+    document.getElementById('tbody_data').innerHTML = row
 }
