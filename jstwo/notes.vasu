@@ -91,3 +91,5 @@ console.log(result)            console.log(result)
 output: Hello GM                output: Hello GM            
 
 Note: If function has only one statement is Return we use, fat arrow implicit return.
+
+

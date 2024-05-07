@@ -1,0 +1,20 @@
+
+                                            JSthree notes...
+
+What is Class ?
+
+Class is Template, plan, draft, design, bliuprint to Construct object.
+
+variable mode            function mode                    Class mode (Always start with Cap)
+-------------            -------------                   ------------
+var emp_Id = 101        function add(){                  Class Employee{
+
+                         }                                }
+
+Class user {
+    //Class contains *proparties & methods
+                     *property (var,let)
+                     *methods (functions)
+}
+console.log (new user())
+console.log (new user()) --> we can use end number of times
