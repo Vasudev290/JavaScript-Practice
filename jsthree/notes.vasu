@@ -18,3 +18,10 @@ Class user {
 }
 console.log (new user())
 console.log (new user()) --> we can use end number of times
+
+========================================================================================================
+
+What is Constructor ?
+* Special method to initialize object value.
+*It will execute automatically, at the time of object creation.
+*We can't invoke Constructor method explicity.

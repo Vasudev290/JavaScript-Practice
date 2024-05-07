@@ -9,9 +9,11 @@ class Saving_Account {
         console.log("Amount deposited 5000");
      }
     withdraw() {
-        console.log("Amount withdraw 2500 ");
+        console.log("Amount withdraw");
      }
-    getStatement(){ }
+    getStatement() {
+        console.log("Collected the Statement");
+     }
     getBal(){ }
     Close_Account(){ }
 }
@@ -24,3 +26,4 @@ console.log(Aravind.main_bal);
 Arjun.open_Account()
 Arjun.deposit()
 Arjun.withdraw()
+Arjun.getStatement()
