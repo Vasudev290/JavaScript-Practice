@@ -41,5 +41,24 @@ What is THIS Keyword ?
 
 This keyword is a pointing to current object.
 
+===================================================================================================================
 
-     
+
+                                       Import and Export 
+            ES5                                                                       ES6
+
+                                    Default Export and Import
+----------------------------------------------------       -------------------------------------------------------------   
+Govt.js                  State.js                             Govt.js                             start.js
+let tax = 20           const tax = require('./Govt)        let tax = 20;                     import tax from "./govt";  
+
+module.Exports = tax    console.log(tax);                   export default tax;                console.log(tax);
+----------------------------------------------------       -------------------------------------------------------------
+Note : If you want to export mulitiple value - 
+        named export and named import
+-------------------------------------------------------------------
+named exp and ipm in ES5                                              named exp and ipm in ES6     
+------------------------                                             --------------------------
+let tax = 18                  const{tax,discount}=require('./Govt)   let tax = 20                     import{tax,discount}from('./Govt')
+let discount =3               console.log(tax)                       let discount = 3                  console.log(tax)
+module.export={tax,discount}  console.log(discount)                  export(tax.discount)              console.log(discount)
