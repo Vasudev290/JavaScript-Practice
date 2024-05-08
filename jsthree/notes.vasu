@@ -25,3 +25,21 @@ What is Constructor ?
 * Special method to initialize object value.
 *It will execute automatically, at the time of object creation.
 *We can't invoke Constructor method explicity.
+
+I want reuse the existing functionality ?
+
+how to reuse the existing functionality ?
+
+Ans :- Inheritance 
+=====================
+Reuse the existing functionality 
+      and add new functionality
+
+
+
+What is THIS Keyword ?
+
+This keyword is a pointing to current object.
+
+
+     
