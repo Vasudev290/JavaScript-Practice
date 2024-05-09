@@ -24,5 +24,11 @@ N= array.length
 let marks = [35,36,37,40,42,44]                                           let marks = [35,30,40,30,25,10,12]
 let x = marks.map((mark)=>{                                               let x = marks.forEach((marks)=>{
     return mark + 1                                                       return marks + 1 
-}) 
-note: map method return new array                                          ForEach method [return undefined]                                                                      })
+})                                                                        })
+note: map method return new array                                         ForEach method [return undefined]                                                                     
+                                                                    
+
+Spread Opreators:-
+-----------------
+
+Spread Opreators apply for Array and objects. syntex like (...(3douts)) extract and copy 
