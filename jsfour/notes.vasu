@@ -31,4 +31,11 @@ note: map method return new array                                         ForEac
 Spread Opreators:-
 -----------------
 
-Spread Opreators apply for Array and objects. syntex like (...(3douts)) extract and copy 
+Spread Opreators apply for Array and objects. syntex like (...(3douts)) extract and copy
+
+
+object Destructruing ?
+
+reading object proparties as variable
+we are destructring the object, based on the requirement.
+ Readability
