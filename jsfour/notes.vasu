@@ -39,3 +39,10 @@ object Destructruing ?
 reading object proparties as variable
 we are destructring the object, based on the requirement.
  Readability
+
+
+ What is call back function ?
+
+*While invoking a function, passing a function as argument to another function -call back
+*promise -there using .then() .catch() 
+*async & await
