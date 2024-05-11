@@ -46,3 +46,9 @@ we are destructring the object, based on the requirement.
 *While invoking a function, passing a function as argument to another function -call back
 *promise -there using .then() .catch() 
 *async & await
+
+
+What is promise function?
+
+*promise is a function it take two argument one is represnting success another one is representing failure
+*Once promise object is there we're going to use .then()- (then is representing success), .catch()- (catch is representing failure)
