@@ -1,0 +1,12 @@
+ES6
+
+[], foreach()
+    .map()
+    .filter()
+
+Object desb
+... (spread opretor)
+
+import , export
+
+async, await
