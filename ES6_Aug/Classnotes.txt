@@ -1,5 +1,5 @@
 ES6
-
+ arraymethods ( pop unpop, shift unshift)
 [], foreach()
     .map()
     .filter()
