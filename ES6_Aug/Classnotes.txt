@@ -10,3 +10,9 @@ Object desb
 import , export
 
 async, await
+
+
+
+Async program 
+Call back
+we can pass the number as argument , string as argument, Function as argument
