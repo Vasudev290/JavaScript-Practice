@@ -27,6 +27,7 @@ fetchDataa.then((data) => {
 .catch((err) => console.log(err))
 
 
+
 //Using Finally Method
 const myData = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -36,6 +37,8 @@ const myData = new Promise((resolve, reject) => {
 myData.then((message) => console.log(message))
 .catch((err) => console.log(err))
 .finally(() => console.log("Operation Completed..!"))
+
+
 
 //Data Fetching Operation 
 const fetchData = () => {
