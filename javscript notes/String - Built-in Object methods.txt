@@ -1,0 +1,41 @@
+let value = "  Hello, Good Morning!";
+let equel = "same too youu!"
+//Value
+console.log(value.valueOf())
+
+//length
+console.log(value.length)
+
+//concat
+console.log(value.concat(" ", equel))
+
+//charAt
+console.log(value.charAt(4))
+
+//index0f
+console.log(value.indexOf("G"))
+
+//lastindexOf
+console.log(value.lastIndexOf("n"))
+
+//split
+console.log(value.split(" "))
+
+//slice
+console.log(value.slice(7))
+console.log(value.slice(0, 5))
+
+//Replace
+console.log(value.replace("Hello", "Hey"))
+
+//Repeat
+console.log(value.repeat(3))
+
+//toUpperCase
+console.log(value.toUpperCase())
+
+//toLowerCase
+console.log(value.toLowerCase())
+
+//trim
+console.log(value.trim())

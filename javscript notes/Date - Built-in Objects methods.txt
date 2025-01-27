@@ -1,0 +1,30 @@
+
+//Get the Date
+var today = new Date();
+console.log(today.toString())
+
+//give any of the Data
+var anyToday = new Date("2001, 03, 31");
+console.log(anyToday.toString())
+
+var toDay = new Date();
+console.log(toDay.getDate())  //Date
+console.log(toDay.getDay()+1)  //Day
+console.log(toDay.getFullYear()) //Year
+console.log(toDay.getMonth() +1) //Month
+console.log(toDay.getHours()) //Hour
+console.log(toDay.getMinutes()) //Minutes
+console.log(toDay.getSeconds()) //Seconds
+
+var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thuesday', 'Friday','Saturday']
+console.log("Today is a :",days[toDay.getDay()])
+
+// console.log(day[toDay.getDay()]); // Day name
+
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+console.log(months["This Months is a :",toDay.getMonth()])
+
+
+console.log("This indian time Style :",toDay.toLocaleString('en-IN'))
+console.log("This USA time Style :",toDay.toLocaleString('en-US'))
+console.log("This Dubai time Style :", toDay.toLocaleString('en-US', { timeZone: 'Asia/Dubai' }))

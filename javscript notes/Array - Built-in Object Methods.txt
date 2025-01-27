@@ -1,0 +1,342 @@
+
+//ForEach
+numbers = [1,2,3,4,5,6,7,8,9,10] 
+for(let i = 0; i<numbers.length; i++){
+    console.log(numbers[i])
+}
+
+numbers.forEach((elements) => {
+    console.log(elements)
+})
+
+let sum = 0;
+numbers.forEach((elements) => {
+    sum = sum + elements
+})
+console.log("Total Array value :", sum)
+
+
+//Map -> method
+
+input = [1,2,3,4,5,6]
+// Expected output = [1,4,9,16,36]
+
+//Loop method
+const output = []
+const numbers = [1,2,3,4,5,6]
+for (let i=0; i<numbers.length; i++){
+    const element = numbers[i]
+    const squere = element * element
+    output.push(squere)
+}
+console.log(numbers)
+console.log("Using with loop :",output)
+
+
+//function
+function squreMapping(numbers){
+    const result = []
+    for (let i=0; i<numbers.length; i++){
+        result.push(numbers[i] * numbers[i])
+    }
+    return result
+}
+const output2 = squreMapping(input)
+console.log("With original :", input)
+console.log("With function :", output2)
+
+
+//map
+const squereValue = input.map((element) => element * element)
+console.log("Original Value: ", input)
+console.log("Map Value: ", squereValue)
+
+
+
+self made
+input = [1,2,3,4,5,6,7]
+// Expected output = [1,4,9,16,36]
+
+//Loop method
+const output = []
+for(let i=0; i<input.length; i++){
+    output.push(input[i] * input[i])
+}
+console.log("Original Value :", input)
+console.log("loop Mulitple Value :", output)
+
+
+//function method
+function squereValue(numbers){
+    for(let i=0; i<numbers.length; i++){
+        output.push(numbers[i] * numbers[i])
+    }
+    return output
+}
+console.log("Original Value :", input)
+console.log("function Mulitple Value :", squereValue(input))
+
+
+//map method
+const squereNumbers = input.map((element) => element * element)
+
+console.log("Original Value :", input)
+console.log("Map Mulitple Value :", squereNumbers)
+
+
+filter -> Method
+input = [1,2,3,4,5,6,7,8,9,10]
+// Expected output = [1,4,9,16,36]
+
+//Loop method
+const output = []
+for(let i=0; i<input.length; i++){
+    const element = input[i]
+    if(element % 2 == 1){
+        output.push(element)
+    }
+}
+console.log("Original Value :", input)
+console.log("Odd Value :", output)
+
+//Function method
+function oddNumbers(value){
+    for(i=0; i<input.length; i++){
+        const element = input[i]
+        if(element % 2 === 0){
+            output.push(element)
+        }
+        return output
+    }
+}
+console.log("Original Value :", input)
+console.log(" function Odd Value :", oddNumbers(input))
+
+
+//Map method
+const filterValue = input.filter((element) => {
+    return element % 2 == 1;
+});
+
+console.log("Original Value :", input)
+console.log("Filter Odd Value :",filterValue) 
+
+
+
+//forEach vs Map   difference between forEach vs map
+
+//let data = [10,20,30,40,50,60,70,80,90]
+
+//forEach
+var result = data.forEach((element) => {
+    //console.log(element)
+    return element   //it can't return the value
+})
+console.log(result)   //undefined
+
+
+//Map
+let result =  data.map((element) => {
+    //console.log(element)
+    return element
+})
+console.log(result)
+
+
+//forEach vs Map  with some execise
+
+//let data = [10,20,30,40,50,60,70,80,90]
+let data = [
+    {pName:"Mobile", price:1000},
+    {pName:"Laptop", price:2000},
+    {pName:"Earbuds", price:3000},
+    {pName:"Tablet", price:4000},
+    ]
+//forEach
+var result = data.forEach((element) => {
+    console.log(element.price)
+      //it can't return the value
+})
+
+
+
+//Map
+var result =  data.map((element) => {
+    //console.log(element)
+    return element.pName
+})
+console.log(result)
+
+
+
+//Filter methods
+//filter method
+let user = ['vasu', 'vijay', 'anil', 'yacob', 'surya', 'krishnaRao', 'Mahesh']
+
+//example 1
+let result = user.filter((info) => {
+    if(info == 'vasu'){
+        return info
+    }
+})
+console.log(result)
+
+
+//example2
+let data = [1,2,3,4,5,6,7,8,9,10]
+
+let result1 = data.filter((vle) => {
+    if(vle %2 == 0){ 
+        return vle
+    }
+})
+console.log(result1)
+
+
+//example3
+var studentInfo = [
+    {RollNo: 101, Name: "Vasu", Mark: 99},
+    {RollNo: 102, Name: "vijay", Mark: 69},
+    {RollNo: 103, Name: "anil", Mark: 47},
+    {RollNo: 104, Name: "prashanth", Mark: 49},
+    {RollNo: 105, Name: "abhith", Mark: 69},
+    {RollNo: 106, Name: "yacob", Mark: 57},
+    {RollNo: 107, Name: "surya", Mark: 93},
+    {RollNo: 108, Name: "krishnaRao", Mark: 63},
+    {RollNo: 109, Name: "Mahesh", Mark: 73},
+    {RollNo: 110, Name: "Sisendri", Mark: 33},
+    ];
+    
+let result2 = studentInfo.filter((info) => {
+    return info.Mark >= 30 && info.Mark <= 65;
+})
+console.log(result2)
+
+
+//example4
+let productInfo = [
+    {proId: 1, productName: 'Iphone', Price: '69000'},
+    {proId: 2, productName: 'Samsung', Price: '79000'},
+    {proId: 3, productName: 'Realme', Price: '29000'},
+    {proId: 4, productName: 'Redmi', Price: '19000'},
+    {proId: 5, productName: 'Vivo', Price: '39000'},
+    {proId: 6, productName: 'Oppo', Price: '19000'},
+    {proId: 7, productName: 'Google pixel', Price: '79000'},
+    {proId: 8, productName: 'Nothing', Price: '89000'},
+    {proId: 9, productName: 'Nokia', Price: '6000'},
+    {proId: 10, productName: 'BlackBerry', Price: '9000'}
+    ];
+
+let result3 = productInfo.filter((info) => {
+    if(info.Price >= 5000 && info.Price <= 10000){
+        return info
+    }
+})
+console.log(result3)
+
+
+//push, pop, shift, unshift, splice
+
+let mobiles = ['vivo', 'oppo', 'Realme', 'Redmi', 'Sumsung', 'Nokia']
+
+//Push method  => it'll add end of the arrays
+mobiles.push('Google Pixel')
+console.log(mobiles)
+
+//pop method
+mobiles.pop() //it'll remove end of the arrays
+console.log(mobiles)
+
+//shift method
+mobiles.shift()  //it'll remove begining of the array
+console.log(mobiles)
+
+//unshift method
+mobiles.unshift("Iphone", "OnePuls")  //it'll add begining of the array
+console.log(mobiles)
+
+
+//splice
+mobiles.splice(2, 0, "Nothing")
+console.log(mobiles)
+
+mobiles.splice(3, 1, "iPad")
+console.log(mobiles)
+
+mobiles.splice(7, 2, "Sunsung Laptop")
+console.log(mobiles)
+
+
+//find, findIndex, findLast, findLastIndex
+
+
+let productInfo = [
+    {PId: 101, Pname: 'Mobiles', Price:15000},
+    {PId: 102, Pname: 'Laptop', Price:13000},
+    {PId: 103, Pname: 'Refrigrator', Price:27000},
+    {PId: 104, Pname: 'Washing mechine', Price:45000},
+    {PId: 105, Pname: 'Microwave', Price:17400},
+    {PId: 106, Pname: 'Kitchan applience', Price:25000},
+    {PId: 107, Pname: 'Funrniture', Price:126000},
+    {PId: 108, Pname: 'Woods', Price:1400},
+    {PId: 109, Pname: 'Eletronic', Price:66000},
+    {PId: 110, Pname: 'Gagates', Price:16000}
+    ]
+    
+//All products
+let result = productInfo.filter((info) => {
+    return info
+})
+console.log(result)
+
+//find()
+let findMethod = productInfo.find(info => {
+    return info.Price >= 10000;
+})
+console.log("Find Method :", findMethod)
+
+
+//findIndex()
+let findIndexMethod = productInfo.findIndex(info => {
+    return info.Price >= 30000
+});
+console.log("FindIndex Method :", findIndexMethod)
+
+
+//findLast()
+let findLastMethod = productInfo.findLast(info => {
+    return info.Price >= 10000
+})
+console.log("FindLast :", findLastMethod)
+
+
+//findLastIndex()
+let findLastIndexMethod = productInfo.findLastIndex(info => {
+    return info.Price >= 10000
+})
+
+console.log("FindLastIndex :", findLastIndexMethod)
+
+
+//Concat 
+let product1 = ['samsung', 'Nokia', 'vivo', 'oppo'];
+let product2 = ['Nothing', 'Google pixel', 'Realme', 'Iphone'];
+
+const cartProducts = product1.concat(product2);
+console.log("Cart Products:", cartProducts);
+
+let index1 = [[1, 2, 3, 4, 5, 6], ['Ram', 'Laxman', 'Sita']];
+let index2 = ['Arjun', 'Krishna'];
+
+let bothIndex = index1.concat(index2); // Concatenating index1 and index2
+console.log("Both Index (Before Push):", bothIndex);
+
+// Adding elements to `index1` (nested array elements will reflect in bothIndex)
+index1[0].push(7, 8, 9, 10);
+index1[1].push('Hanuman');
+console.log("Both Index (After Push to Index1):", bothIndex);
+
+// Adding elements to `index2` (will not affect bothIndex because it's a separate reference)
+index2.push('Bhimma');
+console.log("Both Index (After Push to Index2):", bothIndex);
+console.log("Index2 (After Push):", index2);

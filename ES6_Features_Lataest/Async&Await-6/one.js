@@ -13,7 +13,7 @@ const getData = async () => {
 getData()
 
 
-//Multiple data fetched method
+//Multiple data fetched methodkk
 const fetchData = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -31,9 +31,13 @@ const fetchOrder = () => {
 }
 
 const getDetails = async () => {
-    const data = await fetchData()
-    const order = await fetchOrder()
-    console.log(data, order)
+    try{
+        const data = await fetchData()
+        const order = await fetchOrder()
+        console.log(data, order)
+    } catch(err) {
+        if (err) throw err
+    }
 }
 
 getDetails()

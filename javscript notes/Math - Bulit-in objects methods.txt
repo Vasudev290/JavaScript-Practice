@@ -1,0 +1,77 @@
+Bulit-in objects methods
+=========================
+
+//Math methods
+//Maximum value 
+const maxValue = Math.max(1,2,3,546,66,54,33,322,57,78)
+console.log("Maximum Value: ", maxValue)
+
+//Minimum Value
+const minValue = Math.min(45,21,45,67745,3,32,56,788,44,347,89,9,3,21.9)
+console.log("Minmum Value :", minValue)
+
+
+//Round Value check the conditions 1.04 => 1 or 1.05 => 2
+console.log(Math.round(35.14)) //35
+console.log(Math.round(38.15)) //38
+console.log(Math.round(35.03)) //35
+
+//Ceil Value  check the incr or Decr 
+console.log(Math.ceil(45.14)) //46
+console.log(Math.ceil(78.15)) //79
+console.log(Math.ceil(15.03)) //16
+
+//floor Value couldn't look back
+console.log(Math.floor(12.4)) //12
+console.log(Math.floor(75.5)) //75
+console.log(Math.floor(158.3)) //158
+
+
+//Random Value Generate Random Value
+console.log(Math.random())  // 0.09436087542772209
+console.log(Math.random())  // 0.5076121903339761
+console.log(Math.random())  // 0.27963469843365996
+console.log(Math.random())  // 0.3526471388241459
+
+
+
+//Formula
+// var numberOfChoices = 12;
+// var firstValue = 1
+// var randomValue = Math.floor(Math.random() * numberOfChoices + firstValue)
+// console.log(randomValue)
+
+
+//Generate otp numbers
+let numberValues = 9999
+let firstValue = 1000
+let randomValue = Math.floor(Math.random() * numberValues + firstValue)
+console.log("Generate OTP Numbers :", randomValue)
+
+
+console.log("Random Numbers :", Math.floor(Math.random() * 999 + 100))
+
+function getRandomNum(from, to) {
+    return Math.floor(Math.random() * (to - from) + from);
+}
+console.log("Random Numbers with func :", getRandomNum(1, 10))
+
+
+const generateNumber = (from, to) => {
+    return Math.floor(Math.random() * (to - from) + from);
+}
+console.log("Random numbers with Arrow :", generateNumber(10, 20))
+
+
+var language = ['python', 'javascript','php', 'Java', '.Net', 'ruby']
+console.log("Random Language :", language[getRandomNum(0, language.length-1)])
+
+console.log("Random OTP numbers :", Math.floor(Math.random()*(9999 - 1000) + 1000))
+
+function getRandomNumbers(from, to) {
+    return(Math.floor(Math.random() * (to - from) + from))
+}
+console.log("Random OTP Numbers with Function :",getRandomNumbers(100, 999) )
+
+const names = ['Arjun', 'Krishna', 'Bhimma', 'Abhi', 'Dhorana']
+console.log("Mahabharat Real Heros :", names[getRandomNumbers(0, names.length - 1)])
