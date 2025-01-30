@@ -340,3 +340,198 @@ console.log("Both Index (After Push to Index1):", bothIndex);
 index2.push('Bhimma');
 console.log("Both Index (After Push to Index2):", bothIndex);
 console.log("Index2 (After Push):", index2);
+
+
+
+//Slice methods
+let data = ['Mobiles', 'Laptop', 'iPhone', 'iPad', 'MacBook']
+
+var sliceMethod = data.slice()
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(1)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(3)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(1,4)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(-2)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(1, -1)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(-2, 1)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(-1,-4)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(-2, -1)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(2, -2)
+console.log(sliceMethod)
+
+var sliceMethod = data.slice(-2, 2)
+console.log(sliceMethod)
+
+
+
+//inculdes methods
+let products = ['Vivo', 'oppo', 'Redmi', 'Sumsung', 'Realme']
+
+let pro = products.includes("vasu")
+console.log(pro)
+
+let userData = [
+    {SId: 1001, Sname: "Vasu"},
+    {SId: 1002, Sname: "Susmitha"},
+    {SId: 1003, Sname: "Lakshmi"},
+    {SId: 1004, Sname: "Kesava"},
+    {SId: 1005, Sname: "Vanaja"},
+    {SId: 1006, Sname: "kiran"},
+    {SId: 1007, Sname: "ayesha"},
+    {SId: 1008, Sname: "anil"},
+    ]
+    
+let gettingData = userData.map((data) => {
+    return data.Sname
+})
+console.log(gettingData)
+
+function dataIncludes(name){
+    if(gettingData.includes(name)){
+        console.log(`The student name ${name} is Available`)
+    }else{
+        console.log(`The student name ${name} isn't Available`)
+    }
+}
+dataIncludes("Vasu")
+
+
+
+let products = ['Mobiles','Laptop', 'iPhone', 'Ipad', 'MacBook', 'Laptop']
+console.log(products)
+
+//indexOf
+let value = products.indexOf('Laptop')
+console.log(value)
+
+
+//LastIndexOf
+let value1 = products.lastIndexOf('Laptop')
+console.log(value1)
+
+const fruits = ['apples', 'banana', 'orange', 'Mango', 'Berry']
+const extraFruits = ['Amla', 'peaches', 'kwie']
+//const pro = fruits.push('graps')
+
+//toUpper & toLower
+// let toLower = fruits.map((fruit) => fruit.toUpperCase())
+// console.log(toLower)
+
+// //forEach method
+// let separate = fruits.forEach((fruit) => {
+//     console.log(fruit)
+// })
+
+//toString
+// console.log(fruits.toString())
+
+// fruits.push(...extraFruits)
+// console.log(fruits)
+
+
+//slice
+// var myF = fruits.slice(0,1)
+// console.log(myF)
+
+
+//splice
+const mySplice =fruits.splice(1, 2, "sitaplakaye", "sapotha")
+console.log(mySplice)
+console.log(fruits)
+
+
+const fruits = ['apples', 'banana', 'orange', 'mango', 'berry', 'pineapple', 'graps', 'strawberry']
+
+forEach() method
+fruits.forEach((fruit) => {
+    console.log(fruit)
+})
+
+map() method with return statement
+let myFruitsMap = fruits.map((fruit) => {
+    //console.log(fruit)
+    return fruit.toUpperCase()
+})
+console.log(myFruitsMap)
+
+
+//without return statement
+let myFruitsMap1 = fruits.map((fruit) => fruit.toLowerCase())
+console.log(myFruitsMap1)
+
+const number = [1,2,3,4,5]
+let myNumber = number.map((num) => num * 2)
+console.log(number)
+console.log(myNumber)
+
+
+//at() method
+const char = ['a', 'b', 'c', 'd']
+console.log(char[2])   //c
+console.log(char.at(3))  //d
+console.log(char.at(-2))  //c
+
+
+//copywithin() method
+const fruits = ['apples', 'banana', 'orange', 'mango', 'berry']
+
+
+console.log(fruits.copyWithin(0, 1, 2))
+//[ 'banana', 'banana', 'orange', 'mango', 'berry' ]
+
+console.log(fruits.copyWithin(0, 1))
+//[ 'banana', 'orange', 'mango', 'berry', 'berry' ]
+
+
+//filter() method1
+const fruits = ['apples', 'banana', 'orange', 'mango', 'berry']
+
+let myValue = fruits.filter((fruit) => fruit.length > 5)
+console.log(fruits)
+console.log(myValue)
+
+
+//filter() method2
+const users = [
+    {id:1, name:'vasu', active: true},
+    {id:2, name:'sush', active: true},
+    {id:3, name:'kesava', active: false}
+    ]
+const activeResult = users.filter((user) => user.active === true)
+console.log("Users :", users)
+console.log("Active users :", activeResult)
+
+
+//Reduce() - method
+
+const hotelBill = [100, 200, 300, 400, 500]
+const totalHotelBillAmt = hotelBill.reduce((prevVal, currtVal) => {
+    //console.log(prevVal, currtVal)
+    return prevVal + currtVal
+}, 0)   //0+100+200+300
+console.log(totalHotelBillAmt)
+
+
+let totalPrice = hotelBill.reduce((prev, curr) => {
+    return prev + curr
+}, 0)
+console.log(totalPrice)
+
+

@@ -1,0 +1,93 @@
+Type convertion
+// //type casting (type conversion)
+// //implicit conversion
+
+// //string to number
+// //add or concatination
+var x = 100 + '10';
+console.log("Value of :", x)
+console.log("type of :",(typeof(x)))
+
+// //number to string
+// //substract (-)
+var x = 100 - '10';
+console.log("Value of :", x)
+console.log("type of :",(typeof(x)))
+
+// //multiple (*)
+var x = 2 * '10';
+console.log("Value of :", x)
+console.log("type of :",(typeof(x)))
+
+// //division (/)
+var x = 2 / '10';
+console.log("Value of :", x)
+console.log("type of :",(typeof(x)))
+
+
+// //sub(-). multiple(*), division(/) with string, boolean, null, undefined
+
+// //string
+var x = "vasu" * '10';  
+console.log("Value of :", x)  //NAN
+console.log("type of :",(typeof(x)))
+
+
+// //Boolean have some value is => true - 1, false - 0
+var x = true * '10';  
+console.log("Value of :", x)  //10
+console.log("type of :",(typeof(x)))
+
+var x = false - 10;  
+console.log("Value of :", x)  //-10
+console.log("type of :",(typeof(x)))
+
+// //null have some value like => 0
+var x = null === undefined;  
+console.log("Value of :", x)  //10
+console.log("type of :",(typeof(x)))
+
+// //undefined
+var x = undefined + 13;  
+console.log("Value of :", x)  //NAN
+console.log("type of :",(typeof(x)))
+
+
+// //explicit conversion
+var x = 10
+console.log("Value :", x)
+console.log("typeof :", (typeof(x)))
+
+
+//String
+//String value convert into String value
+var y = String(x)
+console.log("Value :", y)
+console.log("typeof :", (typeof(y)))
+
+
+//Number(Number, parseInt, parseFloot)
+var a = '123.434'
+console.log("Value :", a)
+console.log("typeof :", (typeof(a)))
+
+var b = Number(a)
+console.log("Value :", b)
+console.log("typeof :", (typeof(b)))
+
+var c =parseInt(a)
+console.log("Value :", c)
+console.log("typeof :", (typeof(c)))
+
+var c1 = parseFloat(a)
+console.log("Value :", c1)
+console.log("typeof :", (typeof(c1)))
+
+//Boolean(true, false)
+var bool = 0;
+console.log("Value :", bool)
+console.log("typeof :", (typeof(bool)))
+
+var bool1 = Boolean(bool);
+console.log("Value :", bool1)
+console.log("typeof :", (typeof(bool1)))

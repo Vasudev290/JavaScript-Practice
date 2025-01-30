@@ -1,0 +1,54 @@
+//Operators
+
+//Arithmetic operators
+console.log("Arithmetric operator")
+var a = 5;
+var b = 20;
+
+console.log("total Value of addition :", a+b)
+console.log("total Value of Substration :", a-b)
+console.log("total Value of Multiple :", a*b)
+console.log("total Value of Exponentiation :", a ** b)
+console.log("total Value of Division :", a/b)
+console.log("total Value of Modules :", a%b)
+console.log("Value of pre/incr :", ++a)
+console.log("Value of post/incr :", b++)
+console.log("Value of pre/Decr :", --a)
+console.log("Value of post/Decr :", b--)
+
+
+//Assignment opeartors
+console.log("Assignmant operators")
+var x = 5;
+x += 5
+x -= 5
+ x *= 5
+ x /= 5
+ x %= 5
+console.log("the += value is", x)
+
+
+//Comparsion operators
+var a = 35;
+var b = '45';
+var c = a >= b
+var d = a < b ? "True" : 'False'
+console.log(d)
+
+
+//Logical operators
+var a = true;
+var b = false;
+var result  = a && b
+var result1  = a||b
+var result2  = !b
+console.log(result)
+console.log(result1)
+console.log(result2)
+
+
+//string operators
+var name1 = "Vasu";
+var name2 = "Dev";
+var res= name1 +" "+name2
+console.log(res)

@@ -1,0 +1,119 @@
+loops and iterations
+
+For loop 
+syntex ;
+for (inizalisation; condition; incr/decr){
+    code block
+}
+for (i=5; i<=10; i++){
+     if(i % 2 == 0){
+         console.log("2","x",i,"=",i*2)   
+     }
+}
+for(i=10; i>1; i--){
+    console.log(i)
+}
+ console.log(i)
+
+while loop
+syntex:
+inizalisation
+while(condition){
+    //code block
+    //incr/decr
+}
+
+let i=1
+while(i <= 10){
+    console.log(i);
+    i++
+}
+
+print even number using with while loop
+let i=1;
+while(i<=10){
+    if(i %2 == 0){
+        console.log("Even numbers :", i)
+    }
+    i++
+}
+
+print odd number using with while loop in reverse way
+let i = 10;
+while(i>=1){
+    if(i%3 == 0){
+        console.log("Odd numbers :", i)
+    }
+    i--
+}
+
+
+do while loop
+syntex:
+inizalisation
+do{
+    code block
+    incr/decr
+} while(condition)  
+
+let i =1
+do{
+    console.log("Numbers :", i);
+    i++
+}while(i <=10);
+
+let i = 10;
+do{
+    if(i %2 ==0){
+        console.log("2", "x", i, "=", i*2)
+    }
+    i--
+}while(i>=1)
+
+
+//iterations => for in  => {}; for of => []
+
+//for in syntex;
+// for (key in object){
+//     //code block
+// }
+
+let person = {
+    name: "Vasu",
+    age: 23,
+    gender: "Male"
+}
+for(key in person){
+    console.log("Key Value",key + ":", person[key])
+}
+
+let fruits = ["Apple", "Banana", "Orange", "Graps", "Lime"]
+for (let fruit in fruits){
+    console.log("Avilable fruit : ",fruits[fruit])
+}
+
+//examples
+let office = {
+    name: "Google",
+    Eno: 25,
+    loc: "U.S.A"
+}
+for (let off in office){
+    console.log(off,":", office[off])
+}
+
+let colors = ["Red", "Black", "Green", "Blue"]
+for(let fav in colors){
+    console.log("Fav colors:", colors[fav])
+}
+
+
+// for of syntex:
+// for(key of array){
+//     //code block
+// }
+
+let colors1 = ["Red", "Black", "Green", "Blue"]
+for(let color of colors1){
+    console.log("Colors :", color)
+}
