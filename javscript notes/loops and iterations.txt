@@ -117,3 +117,45 @@ let colors1 = ["Red", "Black", "Green", "Blue"]
 for(let color of colors1){
     console.log("Colors :", color)
 }
+
+
+//Neasted loops
+//for loop
+Students = [
+    {id: 101, name: "Vasu"},
+    {id: 102, name: "Dev"},
+    {id: 103, name: "Chaithu"},
+    {id: 104, name: "Vamsi"},
+    {id: 105, name: "Krishna"},
+    {id: 106, name: "Fahad"},
+    {id: 107, name: "Vijay"},
+    ];
+
+//For loop
+for (let i = 0; i<Students.length; i++){
+    console.log(Students[i])
+}
+
+//while loop
+let i = 0;
+while(i<Students.length){
+    console.log(Students[i])
+    i++;
+}
+
+//do while loop
+let i =0
+do{
+    console.log(Students[i]);
+    i++;
+}while(i<Students.length)
+
+// for in
+for(let deiThambi in Students){
+    console.log(Students[deiThambi])
+}
+
+// for of
+for(let yakko of Students){
+    console.log(yakko)
+}

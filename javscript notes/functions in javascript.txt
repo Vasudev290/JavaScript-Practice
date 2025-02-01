@@ -1,0 +1,90 @@
+// functions in javascript
+
+let num1 = 35;
+let num2 = 75;
+
+//function Declaration
+function addNo(){
+    let result = num1 + num2
+    console.log(result)
+}
+addNo()
+
+//function Expersion
+const addTwoNum = function addNo(){
+    let result = num1 + num2
+    console.log(result)
+}
+addTwoNum()
+
+//Anonymous function (NameLess Function)
+let addingNum = function(){
+    let add = num1 + num2
+    console.log(add)
+}
+addingNum()
+
+//Arrow function
+let addingValue = () => {
+    let result = num1 + num2
+    console.log(result)
+}
+addingValue()
+
+//object function
+const value = new Function("num1", "num2", "console.log(num1 + num2)")
+value(12, 34)
+
+
+
+//function Hoisting
+
+//function declaration
+console.log(addValue(10, 29))
+function addValue(a,b) {
+    return a+b
+}
+// console.log(addValue(10, 29))
+
+//function Expersion
+//console.log(minusValue(10, 5))  => Hoisting no happen in expersion
+const minusValue = function(a, b){
+    return a-b
+}
+console.log(minusValue(10, 5))
+
+//arrow function
+//console.log(multipleValue(3,5)) => Hoisting no happen in arrow function
+let multipleValue = (a, b) => {
+    return a*b
+}
+console.log(multipleValue(3,5))
+
+
+//Immediately Invoked Function Expression(IIFE)
+let num1 = 29338;
+let num2 = 8754558;
+
+//normal function
+function addValue(){
+    let result = num1+num2
+    console.log(result)
+}
+addValue()
+
+// //IIFE Function method
+(function addValue(no1, no2){
+    let num1 = 29338;
+    let num2 = 8754558;
+    let result = num1 + num2
+    function displayValue() {
+     console.log("Result:", result)   
+    }
+    displayValue()
+})()
+
+//IIFE Arrow Function method
+(() => {
+    let result = num1 + num2
+    console.log(result)
+})()

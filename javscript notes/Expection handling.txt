@@ -1,0 +1,14 @@
+expection handling
+let value = prompt("Plz enter the value:")
+
+try{
+    if(isNaN(value)){
+        throw new Error("Plz enter the only number ")
+    }else if(value < 0){
+        throw new Error("plz enter the positive number only")
+    }else{
+        console.log("Given value is :", value)
+    }
+}catch(err){
+    console.log("Error :", err.message)
+};

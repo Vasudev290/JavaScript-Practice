@@ -1,0 +1,94 @@
+conditional loops 
+
+//if statement
+
+//if condition is true it'll executed if it's false not excuted
+let isAlived = true
+if(isAlived){
+    console.log("Yaeh..! God is Alived")
+}
+
+//if else statement
+
+//if condition is true, if condition will excuted or else condition will excuted
+let isAlived = false
+if(isAlived){
+    console.log("Yaeh..! God is Alived")
+}else{
+    console.log("nope..! Is Death person")
+}
+
+//if else if statement
+let day = 8
+if(day == 1){
+    console.log("Monday");
+} else if(day == 2){
+    console.log("Tuesday");
+}else if(day == 3){
+    console.log("Wednesday")
+} else if(day == 4){
+    console.log("Thuesday")
+}else if(day == 5){
+    console.log("Friday")
+}else if(day == 6|| day == 7) {
+    console.log(" Sat & Sun")
+}else{
+    console.log("None of the day")
+}
+
+//ternary Operator
+
+let value = (10 <= 9) ? "10 value high" : "10 value low"
+console.log(value)
+
+//Ride permission for roller coster
+allowedAge = 18
+actualAge = 16
+parentPermission = true
+let allow = (actualAge > allowedAge) && parentPermission ? "allowed for ride" : "Not allowed for ride"
+ console.log(allow)
+
+small tasks
+//if hour is between 12am(0) to 1pm(13) => Good Morning
+//if hour is between 1pm(13) to 5pm(17) => Good Afternoon
+//if hour is between 5pm(17) to 12am(0) => Good Evening
+
+let hour = new Date().getHours()
+if(hour >= 0 && hour <= 13){
+    console.log("Good Morning!")
+}else if(hour >= 13 && hour <= 17){
+        console.log("Good After Noon")
+}else {
+        console.log("Good Evening")
+}
+
+
+//if months are from mar(3) to jun(6) => summer
+//if months are from jun(6) to oct(10) => rainy
+//if months are from oct(10) to mar(3) => winter
+
+let sesson = 11
+if(sesson >= 3 && sesson <= 6){
+    console.log("Summer Sesson")
+} else if(sesson >= 6 && sesson <= 10){
+    console.log("Rainy Sesson")
+}else {
+    console.log("Winter Sesson")
+}
+
+
+// //Swicth case
+marks = 55
+switch(true){
+    case marks <= 100 && marks >= 75:
+        console.log("Super Good Marks!")
+        break;
+    case marks < 70 && marks >= 50:
+        console.log("Good Marks!")
+        break;
+    case marks < 50 && marks >= 35:
+        console.log("ok Marks!")
+        break;
+    default:
+        console.log("Better luck next time!")
+}
