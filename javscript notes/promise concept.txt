@@ -1,0 +1,39 @@
+promise concept 
+//Promise concept 
+example 1
+
+//promise
+
+console.log("Welcome!")
+let reg = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("PLaese Register!")
+            resolve()
+        }, 3000)
+    })
+}
+
+let login = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("PLease Login")
+            resolve()
+        }, 4000)
+    })
+}
+
+let thankYou = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Thank you for the Login!")
+            resolve()
+        }, 4500)
+    })
+}
+
+FOR PROMISE CONCEPT
+reg()
+.then(login)
+.then(thankYou)
+.catch((err) => console.log("Error :", err))

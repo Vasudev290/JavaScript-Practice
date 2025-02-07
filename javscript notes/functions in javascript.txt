@@ -88,3 +88,387 @@ addValue()
     let result = num1 + num2
     console.log(result)
 })()
+
+
+//function arguments
+function sumExpense(){
+    let total = 0;
+    for (let value of arguments){
+        total += value;
+    }
+    return total;
+}
+let result = sumExpense(12, 768 ,20)
+console.log(`Your total expense is :${result}`);
+
+
+//Pure vs Impure function
+//Pure functions are functions that always return the 'same output' for the 'same input' and do not have any side effects
+//Example 1
+function add(a, b){
+ return  a+b
+}
+console.log("Addition value of :", add(20, 10))  //30
+
+//example-2
+function convertUppercase(text){
+    return text.toUpperCase()
+}
+console.log(convertUppercase("gfskjlsduwipetnbv"))  //GFSKJLSDUWIPETNBV
+
+
+// impure function behave differently
+
+// *They can modify the state of the application or have side effects
+// *Their behavior can be unpridictable and they may affect other parts of the application
+
+const foodList = ['Chicken Biriyani', 'Curd', 'Sambar']
+function addFoods(food){
+    //return foodList.push(food) //Added Food : 4
+    return [...foodList, food]  //Added Food : [ 'Chicken Biriyani', 'Curd', 'Sambar', 'Parota' ]
+}
+const addedFood = addFoods("Parota")
+
+console.log("Original Food :", foodList)
+console.log("Added Food :", addedFood)
+
+
+//Rest Operators
+function dayExpense(...expenses){
+    return expenses.reduce((a, b) => a+b)
+    console.log(expenses)
+}
+let result = dayExpense(10, 20, 30, 40, 50, 100, 10)
+console.log(`The day total expense is : ${result}`)
+
+
+function monthExpenses(chinaLoan, ...monthExp){
+    let total = monthExp.reduce((a, b) => a+b)
+    return chinaLoan - total
+    // console.log(monthExp)
+    // console.log(arguments)
+}
+let result = monthExpenses(500, 10,20,30,40,50)
+console.log(`This monthend total expenses is ${result}`)
+
+//higher Order Function & callback function
+
+//example 1
+let addition = (a, b)=> {
+    //console.log(a+b)
+    return a+b
+}
+
+let subtraction = (a, b)=> {
+    return a-b
+}
+
+let multiply = (a, b)=> {
+    return a*b
+}
+
+let division = (a, b)=> {
+    return a/b
+}
+
+let modules = (a, b)=> {
+    return a%b
+}
+
+let totalCalculator = (a, b, callback)=> {
+    return callback(a, b)
+}
+console.log("The Value of :", totalCalculator(20, 10, modules))
+
+
+// addition(10, 20)
+// subtraction(20, 10)
+// multiply(10, 20)
+// division(10,2)
+// modules(20, 0)
+
+// Higher order function -> takes another function as an argument,or return the function
+
+//example 2
+//welcome
+//Register
+//Login
+//Thank you
+
+console.log("Welcome.!")
+
+const reg = (callback) => {
+    setTimeout(() => {
+        console.log("Please Register!")
+        callback()
+    }, 4000)
+}
+
+const login = (callback) => {
+    setTimeout(() =>{
+        console.log("Please Login")
+        callback()
+    }, 2000)
+}
+
+const thankYou = () => {
+    setTimeout(() =>{
+        console.log("Thank you")
+    }, 1000)
+}
+
+reg(function(){
+    login(function(){
+        thankYou()
+    })
+})
+
+//CallBack function
+function mainFun(callback){
+    console.log("Main function Exe")
+    callback()
+}
+
+function callBack(){
+    console.log("CallBack function Exe")
+}
+
+mainFun(callBack)
+
+
+//Call Back method
+//example -1 
+function inputValue(callback){
+    let data = prompt("Enter the Valid name :")
+    callback(data)
+}
+function displayName(data){
+    console.log(`Recevied data from input: ${data}`)
+}
+
+inputValue(displayName)
+
+example-2
+function sum(value1, value2, callback){
+    let output = value1+value2;
+    callback(output)
+}
+function result(value){
+    console.log(`Sum value of ${value}`)
+}
+sum(40, 20, result)
+
+//callback Function
+function mainFun(...callbacks){
+    console.log("Main Function Executed")
+    callbacks.forEach(callback => {
+        if(typeof callback === "function"){
+            callback()
+        } else{
+            console.log("Invalid callbacks function")
+        }
+    })
+}
+
+function callBack() {
+    console.log("Callback function executed")
+}
+function callBack1() {
+    console.log("Callback1 function executed")
+}
+function callBack2() {
+    console.log("Callback2 function executed")
+}
+function callBack3() {
+    console.log("Callback3 function executed")
+}
+function callBack4() {
+    console.log("Callback4 function executed")
+}
+
+mainFun(callBack, callBack1, callBack2, callBack3, callBack4)
+
+
+
+//Example 3 =>  both are same
+
+setTimeout(() => {
+    console.log("Executing after 3sec")
+}, 3000)
+let myCallBack = () => {
+    console.log("Executing after 4 sec")
+}
+setTimeout(myCallBack, 4000)
+
+//Assignment
+console.log("Hello Sai!")
+setTimeout(() => {
+    console.log("Hii Sai, I'm the doctor, how can i help you?")
+}, 2000)
+setTimeout(() => {
+    console.log("you will be alright! Take these medicines. Take Care")
+}, 4000)
+
+//forEach code
+const numbers = [1,2,3,4,5,6,7]
+numbers.forEach((num) => console.log("Array numbers of :", num))
+
+//Map
+const number = [1,2,3,4,5,6,7]
+let value = number.map((num) => num * 2)
+console.log("Mapping Value :",value)
+
+//filter
+const number1 = [1,2,3,4,5,6,7]
+let value1 = number1.filter((num) => num % 2 === 0)
+console.log("filtered even numbers:",value1)
+
+//reduce
+const number2 = [1,2,3,4,5,6,7,8]
+let value2 = number2.reduce((num, val) => num + val,0)
+console.log("Total Value of :" + value2)
+
+//Generators in function
+function * generators(){
+    console.log("First yield executed!")
+    yield 22;
+    console.log("second yield executed!")
+    yield 33;
+    console.log("thrid yield executed!")
+    yield 44;
+}
+let gen =generators();
+
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+
+
+
+//function Default Parameters
+
+function calculateTax(cost, tax=18){
+    let totalAmt = cost * (tax / 100)
+    console.log(`Total Cost is : ₹${cost}
+GST of tax(${tax}% is : ₹${totalAmt}
+Total Amount is: ₹${cost + totalAmt}`)
+}
+calculateTax(45)
+
+
+//No return without arguments
+function add(){
+    let a=10, b=20, c;
+    c= a+b;
+    console.log("no return without arguments")
+    console.log("Addition Valu:", c)
+}
+add()
+
+//Return without arguments
+function sub(){
+    let a=10, b=20, c;
+    c = b-a;
+    return c
+}
+let result = sub()
+console.log("Return without arguments")
+console.log("Substraction Value:", result)
+
+//No return with argument
+function mul(a, b){
+    let c;
+    c=a*b
+    console.log("No Return with arguments")
+    console.log("Multiple value :", c)
+}
+mul(3, 6)
+
+//Return with arguments
+function div(a, b){
+    let c;
+    c=a/b
+    return c
+}
+let result1 = div(20, 5)
+console.log("Return with arguments")
+console.log("Division Value :", result1)
+
+
+//Closures
+//gives you access to an outer function's scope from an inner function
+
+//Example-1
+// function outerFunction(){
+//     let oFun = "Hii Vasu"
+//     console.log(oFun);
+    
+//     function innerFunction(){
+//         let iFun = "Hii Krishna"
+//         console.log(oFun, iFun)
+//     }
+//     innerFunction()
+// }
+// outerFunction()
+
+
+//Example-2
+function sumPrice(mobile){
+    console.log("Mobile Price :", mobile)
+    return function(laptop){
+        console.log("Laptop Price :", laptop)
+        let price = mobile+laptop
+        //console.log("Total Price :", price)  //=> option 1
+        return price 
+    }
+}
+let reference = sumPrice(25000)
+let totalPrice = reference(85000)
+console.log("Total Price :", totalPrice)
+
+
+
+//Recursion function
+// where an function call by itself
+
+
+//normal for loop 
+n=10
+for(i=10; i>0; i--){
+    console.log(i)
+}
+
+n=20
+for(i=20; i>0; i--){
+    console.log(i)
+}
+
+//with recursion function
+function test(n){
+  //console.log(n)
+  if(n>0){
+      console.log(n)
+      test(n-1)
+  }
+}
+test(10)
+test(20)
+
+
+// factorial with recursion
+function fatorial(n){
+    if(n==0){
+        return 1
+    }else{
+        return n * fatorial(n-1);
+    }
+}
+// let num = 10;
+let result = fatorial(4)
+console.log("Factorial of Result :", result)
+
+
+
+
+
+

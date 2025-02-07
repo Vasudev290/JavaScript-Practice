@@ -1,0 +1,40 @@
+Async &  Await concept
+console.log("Welcome!")
+let reg = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("PLaese Register!")
+            resolve()
+        }, 3000)
+    })
+}
+
+let login = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("PLease Login")
+            resolve()
+        }, 4000)
+    })
+}
+
+let thankYou = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Thank you for the Login!")
+            resolve()
+        }, 4500)
+    })
+}
+//async & await
+let processflow = async () => {
+    try{
+        await reg()
+        await login()
+        await thankYou()
+    }catch(err){
+        if (err) throw err
+    }
+}
+
+processflow()
