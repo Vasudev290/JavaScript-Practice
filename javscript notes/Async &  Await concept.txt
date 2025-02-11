@@ -1,4 +1,40 @@
 Async &  Await concept
+
+//async & Await program
+//Example 1
+let promise = new Promise((res, rej) => {
+    setTimeout(() => {
+        let userDetails = {name: "Vasu", address: "Bangalore"};
+        if(Object.keys(userDetails) !== 0){
+            res(userDetails)
+        }else{
+            rej(userDetails)
+        }
+    }, 2000)
+})
+
+const getData =async () => {
+    
+     let userInfo =await promise;
+     console.log("User Details :",userInfo)
+    //async await Error Handling
+    // try{
+    //     let userInfo =await promise;
+    //     console.log("User Details :",userInfo)
+    // }catch(err){
+    //     console.log("Error :" , err)
+    // }
+}
+getData()
+//normal Promise error handling
+.then(() => {
+    console.log("The program is executed successfully..!")
+})
+.catch(() => {
+    console.log("The program is not executed successfully..!")
+})
+
+//example-2
 console.log("Welcome!")
 let reg = () => {
     return new Promise((resolve) => {
@@ -38,3 +74,239 @@ let processflow = async () => {
 }
 
 processflow()
+
+
+//Get user by id
+//Get all user subscriptions (hotstar, prime)
+//Calculate total cost of all
+
+const getUserId = (id) => {
+    console.log("Got the userId :", id)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+         resolve({id: id, name: 'Vasu'})   
+        }, 1000)
+    })
+}
+
+const getSubscription = (userInfo) => {
+     console.log("Got the user Subscription for :", userInfo)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([
+                {id: 1, title: 'Hotstar'},
+                {id: 2, title: 'Prime'},
+                {id: 3, title: 'Netflix'},
+                ])
+        }, 2000)
+    })
+}
+
+const calculateCost = (subscriptions) => {
+    console.log("Total Subscription :",subscriptions )
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(subscriptions.length * 100)
+        }, 3000)
+    })
+}
+
+//Executing for Promise 
+// getUserId(1)
+// .then(getSubscription)
+// .then(calculateCost)
+// .then((cost) => {
+//     console.log("My Total Cost is ", cost)
+// })
+
+
+//Executing the Async & await
+const displayTotalCost = async () => {
+    try{
+        const userInfo = await getUserId(1)
+        const subscriptions = await getSubscription(userInfo)
+        const totalCalculateCost = await calculateCost(subscriptions)
+        
+        console.log(totalCalculateCost)
+        //console.log(userInfo, subscriptions, totalCalculateCost)
+        console.log("Everything is fetched..!")
+    }catch(error){
+        console.log(error)
+    }
+}
+displayTotalCost()
+
+
+//Full async and await function method
+
+//example - 1
+async function getData(){//=> async await always return the promise
+    return "Vasu"
+}
+
+*An async function always returns a Promise.
+*Since "Vasu" is a normal string, JavaScript wraps it in a Promise.
+
+---------------------------------------------------------------------------
+
+//example-2
+async function getData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promise was resolved successfully!")
+        }, 2000)
+    })
+} 
+const resultPromise = getData()
+//console.log(res)
+resultPromise
+.then(res => console.log(res))
+
+*This async function returns a Promise that resolves after 2 seconds.
+*then() handles the resolved value.
+
+--------------------------------------------------------------------------
+//example - 3
+const myPromise = new Promise((resolve, reject) => {
+    resolve("Promise resolved successfully.!")
+})
+
+// //Normal promise execution method ;)
+function getData(){
+    myPromise.then(res => console.log("Normal Promise Execution :",res))
+}
+getData()
+
+// //Async and await execution method ;)
+// await keyword can only be used inside an async function
+const handlePromise = async () => {
+  const receviedData = await myPromise
+  console.log("Async and await Execution :",receviedData)
+}
+handlePromise()
+
+*The first method (getData()) uses .then().
+*The second method (handlePromise()) uses await, making it look like synchronous execution.
+
+--------------------------------------------------------------------------
+//exmaple -4 
+// Difference between the using of promise patten and async and await pattern
+
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+        resolve("Promise resolved successfully.!")
+  }, 5000)
+})
+
+Normal promise execution method ;)
+function getData(){
+    //JS Engine will not wait for promise to be resolved
+    myPromise.then(res => console.log("Normal Promise Execution :",res)) //after 5s execution
+    console.log("Learning javascript") //1st execution method
+}
+getData()
+
+//Async and await execution method ;)
+
+const handlePromise = async () => {
+    console.log("Starting Point..!")
+    //JS Engine was waiting for promise to resolved
+  const receviedData = await myPromise
+  //once the promise was resolved both execute after 5s 
+  console.log("Learning async and await method in javascript")
+  console.log("Async and await Execution :",receviedData)
+  
+  //both the value of receviedData and receviedData1 execute after 5s at a time 
+  const receviedData1 = await myPromise
+  console.log("Learning async and await again another method in javascript")
+  console.log("Async and await Execution :",receviedData1)
+}
+handlePromise()
+
+---------------------------------------------------------------------------
+
+//Example - 5
+const myPromise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+        resolve("Promise1 resolved successfully.!")
+  }, 3000)
+})
+
+const myPromise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+        resolve("Promise2 resolved successfully.!")
+  }, 5000)
+})
+
+
+//Async and await execution method ;)
+const handlePromise = async () => {
+    console.log("Starting Point..!")
+    //JS Engine was waiting for promise to resolved
+  const receviedData = await myPromise1
+  //once the promise was resolved both execute after 5s 
+  console.log("Learning promise1 async and await method in javascript")
+  console.log("Async and await Execution :",receviedData)
+  
+  //both the value of receviedData and receviedData1 execute after 5s at a time 
+  const receviedData1 = await myPromise2
+  console.log("Learning promise2 async and await again another method in javascript")
+  console.log("Async and await Execution :",receviedData1)
+}
+handlePromise()
+//scenorio - 1
+//1st value is p1 => 5s and the 2nd => 3s
+//The both promise will execute after 5s  
+
+//scenorio - 2
+//1st value is p1 => 3s and the 2nd => 5s
+//first the p1 will execute and second p2 will execute based on the condition one after another will execute.
+
+---------------------------------------------------------------------------
+//example - 6
+const API_URL_LINK = "https://jsonplaceholder.typicode.com/users";
+const handleFetchPromise = async () => {
+    //Error handling method
+   try{
+       const responseData = await fetch(API_URL_LINK) 
+       //fetch() => ResponseObject.json() => jsonValue
+       //fetch return the promise object
+       //Some condition 
+       if(!responseData.ok){
+           throw new Error(`HTTP Error! Status: ${responseData.status}`)
+       }
+       const jsonValue = await responseData.json()
+       //will get the data like readstream format and convert to readStream to json format.
+       console.log("Actual Value :", jsonValue)
+   }catch(err){
+       console.log(err.message)
+   }
+}
+handleFetchPromise()
+//for promises for execution methods
+fetch().then(res => res.json ()).then(res => console.log(res))
+
+
+*Uses fetch() to get API data.
+*if (!responseData.ok) throw new Error(...) handles HTTP errors.
+*Uses async/await for cleaner code.
+
+---------------------------------------------------------------------------
+//example- 7
+const fetchData = async () => {
+    try {
+        const [users, posts] = await Promise.all([
+            fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json()),
+            fetch("https://jsonplaceholder.typicode.com/posts").then(res => res.json()),
+        ]);
+        console.log("Users:", users);
+        console.log("Posts:", posts);
+    } catch (error) {
+        console.error("Fetch Error:", error);
+    }
+};
+
+fetchData();
+
+*Executes multiple API calls in parallel (faster than sequential).
+*Waits for all promises to resolve before executing the next step.

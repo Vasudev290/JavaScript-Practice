@@ -1,4 +1,153 @@
 promise concept 
+
+const data = new Promise((res, rej) => {
+    setTimeout(() => {
+        const value = "Vasu"
+        if(value){
+            res(value)
+        }else{
+            rej(new Error("No Data Presented..!"))
+        }
+    }, 3500)
+});
+data.then((name) => {
+    console.log("Person Name of :", name)
+}).catch((error) => {
+    console.log(error.message)
+}).finally(() => {
+    console.log("Operation completed Successfully..!")
+})
+
+
+//toss Function method using with Promise
+const tossCoin = new Promise((resolve, reject) => {
+    const rand = Math.floor(Math.random()*2)
+    if(rand == 0){
+        resolve()
+    }else{
+        reject()
+    }
+})
+tossCoin.then(() => {
+    console.log("Congarts..!, Its head, you win the toss")
+}).catch(() => {
+    console.log("Soory..! you lost it's tail ")
+}).finally(() => {
+    console.log("The Toss was completed, The Game begins Nowww!")
+})
+
+
+let developer = true;
+const workStatues = new Promise((resolve, reject) => {
+    developer ? resolve("The project is successfully completed..!") : reject("The project is not completed")
+})
+
+workStatues
+.then((val) => {
+    return val
+})
+.then((val) => {
+    console.log("The work status is completed :", val)
+})
+.catch((err) => {
+    console.log(err)
+})
+.finally(() => {
+    console.log("The operation is completed")
+})
+
+
+const cart = ["shoes", "pants", "t-shirt"]
+//producer
+const createOrder = (cart) => {
+    let promiseCons = new Promise((resolve, reject) => {
+        //createOrder
+        //validateCart
+        //orderId
+        if(!validateCart(cart)){
+            let error = (new Error("No Data presented!"))
+            reject(error)
+        }
+        const orderId = "123456";
+        if(orderId){
+            setTimeout(() => {
+                 resolve(orderId)
+            }, 3000)
+        }
+    })
+    return promiseCons;
+}
+const validateCart = (cart) => {
+    return false
+}
+const processedToPayment = (orderId) => {
+    return new Promise((res, rej) => {
+        res("Payment Success..!💰💰")
+    })
+}
+const promises = createOrder(cart)
+//console.log(promises)
+promises
+    .then((orderId) => {
+    console.log(orderId)
+    return orderId
+    })
+    .then((orderId) => {
+     return  processedToPayment(orderId)
+    })
+    .then((payInfo) => {
+        console.log(payInfo)
+    })
+    .catch((err) => {
+    console.log(err)
+    })
+.then(() => {
+    console.log("Whatever happens I'll execute as like!")
+})
+
+
+//Get user by id
+//Get all user subscriptions (hotstar, prime)
+//Calculate total cost of all
+
+const getUserId = (id) => {
+    console.log("Got the userId :", id)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+         resolve({id: id, name: 'Vasu'})   
+        }, 1000)
+    })
+}
+
+const getSubscription = (id) => {
+     console.log("Got the user Subscription for :", id)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([
+                {id: 1, title: 'Hotstar'},
+                {id: 2, title: 'Prime'},
+                {id: 3, title: 'Netflix'},
+                ])
+        }, 2000)
+    })
+}
+
+const calculateCost = (subscriptions) => {
+    console.log("Total Subscription :",subscriptions )
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(subscriptions.length * 100)
+        }, 3000)
+    })
+}
+
+getUserId(1)
+.then(getSubscription)
+.then(calculateCost)
+.then((cost) => {
+    console.log("My Total Cost is ", cost)
+})
+
 //Promise concept 
 example 1
 
@@ -37,3 +186,284 @@ reg()
 .then(login)
 .then(thankYou)
 .catch((err) => console.log("Error :", err))
+
+console.log("Ordering The Coffee")
+//Produceing code
+const orderCoffee = new Promise((resolve, reject) => {
+    const coffeeMechine = true;
+    const coffeePrice = {amt : 20}
+    setTimeout(() => {
+      coffeeMechine ? resolve({message:"Given the coffee to Customer ☕🍵🍵🍵", info:coffeePrice}) : reject("Coffee Mechine was Broken 💔💔")
+    }, 2000)
+})
+//Consumeing code
+orderCoffee
+.then(({message, info}) => {
+    console.log("Coffee Message :", message)
+    console.log("Coffee Price :", info)
+    return new Promise((res) => {
+        res("Here is the bill : ₹20")
+    })
+})
+.then((billInfo) => {
+    console.log("Bill Info :", billInfo)
+})
+.catch((err) => {
+    console.log(err)
+})
+.finally(() => {
+    console.log("Thank you for visiting..!🙏🙏")
+})
+
+
+const wait = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve()
+        }, 1000)
+    })
+}
+wait()
+.then(() => {
+    console.log(3)
+    return wait()
+})
+.then(() => {
+    console.log(2)
+    return wait()
+})
+.then(() => {
+    console.log(1)
+    return wait()
+})
+.then(() => {
+    console.log("Happy New Year..!🌃🌃")
+})
+console.log("Count Down Begins")
+
+Promise Api 
+============
+//Promise APIs
+
+//example -1 (Promise.all())
+//runs multiple promises in parallal and resolve and reject when all promises are fullfilled
+//if any promise rejects, the entire promise.all() fails.
+
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("P1 Promise was Success..!")
+    }, 3000)
+});
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject("P2 Promise was Fail..!")
+    }, 1000)
+});
+const p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("P3 Promise was Success..!")
+    }, 2000)
+});
+
+
+Promise.all([p1, p2, p3])
+.then((res) => {
+    console.log(res)
+})
+.catch((err) => {
+    console.error(err)
+})
+
+//Promise.all()
+//example-2 
+// For User Profile
+const userPro = (userId) => {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res({
+                id: userId,
+                name: "Vasu",
+                email: "vasu@gmail.com"
+            });
+        }, 1000);
+    });
+};
+
+// For Posts
+const userPost = (userId) => {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res([
+                {
+                    id: 1,
+                    title: 'Learn ReactJs from scratch',
+                    content: 'You can learn many things here'
+                },
+                {
+                    id: 2,
+                    title: 'Tailwind is Great',
+                    content: 'You can learn many things here'
+                },
+                {
+                    id: 3,
+                    title: 'Learn MERN Stack world',
+                    content: 'You can learn many things here'
+                },
+            ]);
+        }, 2000);
+    });
+};
+
+// For Comments
+const userComments = (userId) => {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res([
+                {
+                    id: 1,
+                    content: "Looking forward to your coding"
+                },
+                {
+                    id: 2,
+                    content: "Keep up the great work!"
+                },
+            ]);
+        }, 3000);
+    });
+};
+
+// Fetch all data using Promise.all()
+const fetchAllData = (userId) => {
+    return Promise.all([
+        userPro(userId),
+        userPost(userId),
+        userComments(userId),
+    ])
+        .then(([userProfile, userPosts, userComments]) => {
+            const result = {
+                userProfile,
+                userPosts,
+                userComments
+            };
+            console.log(result);
+            return result;
+        })
+        .catch((error) => {
+            console.error('Error:', error.name);
+        });
+};
+
+// Calling function
+fetchAllData(1);
+
+
+
+//example -2 (Promise.allSettled())
+//Waits for all promise to settle(either resolve or reject)
+//Unlike promise.all(), it never fails, even if some promise are rejects
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("P1 Promise was Success..!")
+    }, 3000)
+});
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject("P2 Promise was Fail..!")
+    }, 1000)
+});
+const p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("P3 Promise was Success..!")
+    }, 2000)
+});
+
+
+Promise.allSettled([p1, p2, p3])
+.then((res) => {
+    console.log(res)
+})
+.catch((err) => {
+    console.error(err)
+})
+
+//The out will look like this
+// [
+//   { status: 'fulfilled', value: 'P1 Promise was Success..!' },
+//   { status: 'rejected', reason: 'P2 Promise was Fail..!' },
+//   { status: 'fulfilled', value: 'P3 Promise was Success..!' }
+// ]
+
+
+//example -3 (Promise.race())
+//Return the result of the first promise that settles (Fulfilled or reject.
+//The fastest promises wins regardless of success or fail
+
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("P1 Promise was Success..!")
+    }, 3000)
+});
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject("P2 Promise was Fail..!")
+    }, 4000)
+});
+const p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("P3 Promise was Success..!")
+    }, 1000)
+});
+
+
+Promise.race([p1, p2, p3])
+.then((res) => {
+    console.log(res)
+})
+.catch((err) => {
+    console.error(err)
+})
+
+
+//example -4 (Promise.any())
+//Return the first fulfilled promises (Fulfilled seeking api)
+//if all promises reject, it throws an AggregateError.
+
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("P1 Promise was Success..!")
+    }, 3000)
+});
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject("P2 Promise was Fail..!")
+    }, 4000)
+});
+const p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("P3 Promise was Success..!")
+    }, 1000)
+});
+
+
+Promise.any([p1, p2, p3])
+.then((res) => {
+    console.log(res)
+})
+.catch((err) => {
+    console.error(err)
+})
+
+
+//if all promises reject, it throws an AggregateError.
+// ERROR!
+// [AggregateError: All promises were rejected] {
+//   [errors]: [
+//     'P1 Promise was Success..!',
+//     'P2 Promise was Fail..!',
+//     'P3 Promise was Success..!'
+//   ]
+// }
+
+
+
+
