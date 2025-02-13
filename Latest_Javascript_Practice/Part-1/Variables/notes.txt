@@ -1,0 +1,11 @@
+Variables in Javascript
+A Variable is a named container for storing data value. The stored in a Variable can change during program execution(except for const)
+
+Three type of Variable declarations;
+1, Var
+2, let 
+3, const 
+
+Hoisting in  javascript
+*Javascript moves variables and functions declaration to the top of their scope before code execution.
+*Only Declarations are hoisted, not initialization.
