@@ -1,0 +1,73 @@
+two type of datatypes 
+1, primitive datatype
+2, Non-primitive datatype
+
+Primitive Datatype ; Immutable, stored by value
+-------------------
+*string
+*number
+*boolean
+*undefined
+*null
+*symbal
+*bigint
+
+Non-primitive Datatype ; Mutable, stored by Reference
+*Object(includes *array and *functions and more)
+
+
+string - A sequence of characters enclosed in quotes ('', "", or ````).
+Where to Use: Represent text or characters.
+When to Use: For any textual data like names, messages, etc.
+
+let name = "John"; // Double quotes
+let greeting = 'Hello'; // Single quotes
+let template = `Hi, ${name}`; // Template literals
+
+
+number - Represents both integer and floating-point numbers.
+Where to Use: Perform calculations or store numeric values.
+
+let age = 25; // Integer
+let price = 19.99; // Float
+let infinity = Infinity; // Special number
+let notANumber = NaN; // Not a Number
+
+boolean - Represents true or false.
+Where to Use: Logical operations, conditions, and flags.
+
+let isLoggedIn = true;
+let hasDiscount = false;
+
+
+undefined - A variable declared but not assigned any value.
+Where to Use: Check uninitialized variables.
+
+let x; // Undefined by default
+console.log(x); // undefined
+
+
+null - Represents an empty or non-existent value.
+Where to Use: Deliberately indicate "no value."
+
+let value = null; // Explicitly assigned
+
+
+Non-Primitive Data Types
+
+Array - An ordered list of values.
+Where to Use: Store collections of related data.
+How It Works: Indexed starting from 0.
+
+let fruits = ["Apple", "Banana", "Cherry"];
+
+
+
+Object - A collection of key-value pairs.
+Where to Use: Represent entities with properties.
+
+let person = {
+  name: "Alice",
+  age: 30,
+  isEmployee: true,
+};

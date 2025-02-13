@@ -1,0 +1,45 @@
+1. What are Operators in JavaScript?
+Operators are special symbols or keywords that perform operations on variables or values. 
+They are categorized based on the type of operation they perform.
+
+Arithmetic Operators
+
+let a = 10, b = 3;
+console.log(a + b); // 13
+console.log(a - b); // 7
+console.log(a * b); // 30
+console.log(a / b); // 3.333...
+console.log(a % b); // 1
+console.log(2 ** 3); // 8
+
+
+Logical Operators
+let isAdult = true;
+let hasID = false;
+console.log(isAdult && hasID); // false
+console.log(isAdult || hasID); // true
+console.log(!isAdult); // false
+
+
+Comparison Operators
+let x = 5, y = '5';
+console.log(x == y); // true (type coercion)
+console.log(x === y); // false (strict comparison)
+console.log(x > 3); // true
+console.log(x <= 3); // false
+
+
+Assignment Operators
+let c = 10;
+c += 5; // c = c + 5
+console.log(c); // 15
+c *= 2; // c = c * 2
+console.log(c); // 30
+
+
+Operator Precedence
+let result = 5 + 3 * 2; // Multiplication first
+console.log(result); // 11
+
+result = (5 + 3) * 2; // Parentheses first
+console.log(result); // 16

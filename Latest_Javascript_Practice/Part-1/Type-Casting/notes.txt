@@ -1,0 +1,63 @@
+Type Casting in JavaScript
+===========  === ==========
+Type casting (or type conversion) refers to converting one data type into another. 
+JavaScript provides two primary ways for type casting:
+
+Implicit Type Conversion (Type Coercion) - Automatically performed by JavaScript.
+Explicit Type Conversion (Type Casting) - Manually performed by the programmer using methods or operators.
+
+
+ Implicit Type Conversion (Type Coercion)
+ JavaScript automatically converts a value from one type to another when needed in operations like arithmetic, logical, or string concatenation.
+
+String to Number (Implicit):
+console.log('5' * 2); // 10 (String '5' is coerced to a Number)
+console.log('10' - 2); // 8 (String '10' is coerced to a Number)
+console.log('20' / '4'); // 5 (Both strings are coerced to Numbers)
+
+
+Number to String (Implicit):
+console.log('The value is ' + 10); // 'The value is 10'
+console.log(10 + '20'); // '1020'
+
+
+Boolean to Number (Implicit):
+console.log(true + 2); // 3 (true is coerced to 1)
+console.log(false - 1); // -1 (false is coerced to 0)
+
+
+Logical Coercion:
+console.log('' == false); // true (empty string coerced to false)
+console.log(null == undefined); // true
+
+ Explicit Type Conversion (Type Casting)
+ Explicit type conversion is when you intentionally convert a value into another type using specific methods or operators.
+
+ String Conversion
+ When you want to display or concatenate non-string values as strings.
+*Using String(value)
+*Using .toString()
+
+console.log(String(123)); // '123'
+console.log((123).toString()); // '123'
+console.log(String(true)); // 'true'
+
+
+Number Conversion
+Why use it? When you need numerical operations on string data.
+Using Number(value)
+Using parseInt() or parseFloat() (for strings with numbers)
+
+console.log(Number('123')); // 123
+console.log(parseInt('123.45')); // 123
+console.log(parseFloat('123.45')); // 123.45
+console.log(Number(true)); // 1
+
+
+Boolean Conversion
+Why use it? To evaluate truthiness or falsiness of a value.
+Using Boolean(value)
+
+console.log(Boolean(0)); // false
+console.log(Boolean('hello')); // true
+console.log(Boolean(null)); // false
