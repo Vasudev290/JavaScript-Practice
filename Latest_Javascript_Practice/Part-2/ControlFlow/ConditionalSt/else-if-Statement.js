@@ -54,4 +54,49 @@ if(marks <= 95 && marks >= 85){
     console.log("Fail")
 }
 
+//Write a program to print the greatest number in given two numbers?
+const num1 = 100;
+const num2 = 20;
 
+if(num1 > num2){
+    console.log(`${num1} is the Greatest number`)
+}else if(num1 < num2){
+    console.log(`${num2} is the Greatest number`)
+}else{
+    console.log("Both the number are equal!")
+}
+
+//Write a program to print the least number given two numbers?
+const val1 = 9;
+const val2 = 8;
+if(val1 > val2){
+    console.log(`${val2} is the least number`)
+}else if(val1 < val2){
+    console.log(`${val1} is the least number`)
+}else{
+    console.log("Both Values are equal!")
+}
+
+
+//. Write a program to print the greatest number in given three numbers?
+let player1 = 10, player2 = 20, player3 = 300;
+
+if(player1 >= player2 && player1 >= player3){
+    console.log(`${player1} is the Greatest Score`)
+}else if(player2 >= player1 && player2 >= player3){
+    console.log(`${player2} is the Greatest Score`)
+}else{
+    console.log(`${player3} is the Greatest Score`)
+}
+
+
+//Write a program to print the least number in given three numbers?
+let gamer1 = 10, gamer2 = 2, gamer3 = 300;
+
+if(gamer1 <= gamer2 && gamer1 <= gamer3){
+    console.log(`${gamer1} is the least score`)
+}else if(gamer2 <= gamer3 && gamer2 <= gamer1){
+    console.log(`${gamer2} is the least score`)
+}else{
+    console.log(`${gamer3} is the least score`)
+}
