@@ -1,0 +1,28 @@
+Step-by-Step Breakdown:
+1️⃣ Math.random()
+
+Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive).
+Example outputs: 0.142, 0.876, 0.543, etc.
+
+2️⃣ Math.random() * (50 - 10 + 1)
+
+(50 - 10 + 1) = 41, so the expression becomes
+Math.random() * 41;
+Now, the random number is in the range 0 to 40.9999.
+
+3️⃣ Math.floor(Math.random() * 41)
+
+Math.floor() rounds down to the nearest whole number.
+So now the possible values are: 0, 1, 2, ..., 40.
+
+
+4️⃣ + 10
+
+Since the lowest possible value is 0, we shift the range up by adding 10.
+0 + 10 = 10  (minimum value)
+40 + 10 = 50 (maximum value)
+So the output will always be between 10 and 50 (inclusive).
+
+formula
+Math.floor(Math.random() * (max - min + 1)) + min
+Math.floor(Math.random() * (20 - 5 + 1)) + 5;
