@@ -70,3 +70,34 @@ function reverseNumbers(num){
 
 }
 console.log(reverseNumbers(21435687))
+
+
+//Task 5: Check if a String is a Palindrome
+function isPalidrome(str){
+    let cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, "")
+    let reversedStr = cleanStr.split('').reverse().join('')
+    let inPalidrome = cleanStr === reversedStr;
+    return {
+        original : cleanStr,
+        reversed : reversedStr,
+        isPalindrome: inPalidrome
+    }
+}
+console.log(isPalidrome("madam"))
+console.log(isPalidrome("Hello"))
+
+
+//Task 6: Capitalize the First Letter of Each Word
+function capitalizeWord(str){
+    return str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+}
+console.log(capitalizeWord("javscript is very interesting language!"))
+
+
+//Task 7: Find the Longest Word in a Sentence
+function longestWord(str){
+    let words = str.split(" ")
+    console.log(words)
+    return words.reduce((long, current) => current.length > long.length ? current : long)
+}
+console.log(longestWord("I love programming with javascript"))
