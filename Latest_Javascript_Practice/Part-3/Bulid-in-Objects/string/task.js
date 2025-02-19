@@ -101,3 +101,31 @@ function longestWord(str){
     return words.reduce((long, current) => current.length > long.length ? current : long)
 }
 console.log(longestWord("I love programming with javascript"))
+
+
+//Task 8: Count the Number of Vowels in a String
+function countVowels(str){
+    let matches = str.match(/[aeiou]/gi);
+    return matches ? matches.length : 0
+}
+console.log(countVowels("Hello Everyone, Learn Javascript!"))
+
+
+//Task 9: Remove Duplicate Characters from a String
+//with using of set object
+function removeDuplicate(str){
+    return[...new Set(str)].join('')
+}
+console.log(removeDuplicate("JavaaScriipt"))
+
+//without set object
+function removeDuplicateWords(str){
+    let uniqueStr = "";
+    for(let i=0; i<str.length; i++){
+        if(!uniqueStr.includes(str[i])){
+            uniqueStr += str[i]
+        }
+    }
+    return uniqueStr;
+}
+console.log(removeDuplicateWords("Chenna Kesavulu"))
