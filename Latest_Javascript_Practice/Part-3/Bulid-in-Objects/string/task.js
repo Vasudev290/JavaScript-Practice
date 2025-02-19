@@ -111,12 +111,7 @@ function countVowels(str){
 console.log(countVowels("Hello Everyone, Learn Javascript!"))
 
 
-//Task 9: Remove Duplicate Characters from a String
-//with using of set object
-function removeDuplicate(str){
-    return[...new Set(str)].join('')
-}
-console.log(removeDuplicate("JavaaScriipt"))
+//Task 9: Remove Duplicate Characters from a String & Number for num
 
 //without set object
 function removeDuplicateWords(str){
@@ -129,3 +124,39 @@ function removeDuplicateWords(str){
     return uniqueStr;
 }
 console.log(removeDuplicateWords("Chenna Kesavulu"))
+
+//with using of set object
+function removeDuplicate(str){
+    return[...new Set(str)].join('')
+}
+console.log(removeDuplicate("JavaaScriipt"))
+
+
+//without set object
+function removeDuplicateNumber(num){
+    let numStr = num.toString();
+    let uniqueNum = "";
+
+    for(let i=0; i < numStr.length; i++){
+        if(!uniqueNum.includes(numStr[i])){
+            uniqueNum += numStr[i]
+        }
+    }
+    return parseInt(uniqueNum, 10)
+}
+console.log(removeDuplicateNumber(112234455678895))
+console.log(removeDuplicateNumber(55984455478743325445))
+
+//with set Object in Number
+function removeDuplicateNumberInMethod(num){
+    return parseInt([...new Set(num.toString())].join(''), 10)
+}
+console.log(removeDuplicateNumberInMethod(34255476766789786943))
+
+
+//Task 10: Check if Two Strings Are Anagrams
+function isAgrams(str1, str2){
+    return str1.toLowerCase().split("").sort().join('') === str2.toLowerCase().split("").sort().join('')
+}
+console.log(isAgrams("silent", "listen"))
+console.log(isAgrams("hello", "hi"))
