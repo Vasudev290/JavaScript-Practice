@@ -1,0 +1,57 @@
+Document Object Model(DOM)
+======== ======= =========
+The Dom is a programming interfaces that reprsents the stureture of a webpage as a tree like stureture.
+It allow javascript to interact with html, css, enabling dynamic changes to the document.
+
+DOM tree
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Built-In Objects
+    </title>
+</head>
+<body>
+    <h2>Hello,  Welcome to JS Built-In object Methods</h2>
+    <script src="./Date/data.js"></script>
+</body>
+</html>
+
+1.Selecting Element in the Dom;
+==============================
+
+1, document.getElementById( )
+---- --------- ----------------- 
+const title = document.getElementById('title')
+console.log(title.innerText)
+
+2, document.getElementByClass( )
+-------- ---------- --------------
+const paragraph = document.getElementByClass('description')
+console.log(paragraph[0].innerText)
+
+3, document.getElementByTagName( )
+------ ---------- --------- --------
+const heading = document.getElementByTagName('h1')
+console.log(heading[0].innerText)
+
+4, document.QuerySelector(' ')
+-------- -------- ----------
+const firstPara = document.QuerySelector('.description')
+console.log(firstPara.innerText)
+
+5, document.QuerySelectorAll()
+const allPara = document.QuerySelectorAll('p')
+allPara.forEach(p => p.console.log(p.innerText))
+
+2.Modifying Element in the Dom;
+===============================
+
+1, innerText 2, innerHTML 3, setAttribute getAttribute and removeAttribute 4, style & classList
+
+3, Handling Events in javascript;
+=================================
+1, EventListner (addEventListner) 2, Removing EventListner(removeEventListners)
