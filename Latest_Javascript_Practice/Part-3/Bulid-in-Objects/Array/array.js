@@ -82,3 +82,69 @@ console.log(maxNumber);
 const nestedArray = [[1, 2], [3, 4], [5, 6]];
 const flattened = nestedArray.reduce((acc, arr) => acc.concat(arr), []);
 console.log(flattened); 
+
+
+// pop() & push()
+// pop() - removes the last element from an array.
+// push() - adds elements to the end of an array.
+
+const colors = ["red", "blue", "green"];
+
+//example -1
+colors.pop()
+console.log(colors)  //["red", "blue"]
+
+//example -2
+colors.push("Yellow")
+console.log(colors)  //["red", "blue", "yellow"]
+
+//example -3
+const emptyArr = [];
+console.log(emptyArr.pop())   //undefined
+
+//example -4
+colors.push("purple", "pink")
+console.log(colors)  //[ 'red', 'blue', 'Yellow', 'purple', 'pink' ]
+
+
+// shift() & unshift()
+// shift() removes the first element.
+// unshift() adds elements at the beginning.
+const fruits = ["apple", "banana", "mango"]
+
+//example -1
+fruits.shift()
+console.log(fruits)  //["banana", "mango"]
+
+//example -2
+fruits.unshift("Graps");
+console.log(fruits)   //[ 'Graps', 'banana', 'mango' ]
+
+//example -3
+console.log([].shift()) //undefined
+
+//example -4
+fruits.unshift("Orange", "lemon")
+console.log(fruits)  //[ 'Orange', 'lemon', 'Graps', 'banana', 'mango' ]
+
+
+// slice() & splice()
+// slice() returns a shallow copy of an array.
+// splice() modifies the original array.
+
+//example -1
+const items = ['a', 'b', 'c', 'd', 'e']
+console.log(items.slice(1, 4))   //[ 'b', 'c', 'd' ]
+
+//example -2
+const copy = items.slice();
+console.log(copy);  //[ 'a', 'b', 'c', 'd', 'e' ]
+
+//example -3  -splice() to remove elements
+items.splice(1, 2)
+console.log(items)  //[ 'a', 'd', 'e' ]
+
+//example -4 - splice() to insert elements
+items.splice(1, 0, 'x', 'y')
+console.log(items)  //[ 'a', 'x', 'y', 'd', 'e' ]
+ 
