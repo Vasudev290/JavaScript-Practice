@@ -111,7 +111,7 @@ function countVowels(str){
 console.log(countVowels("Hello Everyone, Learn Javascript!"))
 
 
-//Task 9: Remove Duplicate Characters from a String & Number for num
+//Task 9: Remove Duplicate Characters from a String & Number 
 
 //without set object
 function removeDuplicateWords(str){

@@ -10,3 +10,15 @@ function factorial(n){
 }
 
 console.log(factorial(6))
+
+
+//Example -2 
+let value = prompt("Enter the Value :")
+value = Number(value)
+function factorial(n){
+    if(n === 0)return 1;
+    return n* factorial( n - 1)
+}
+console.log(`Factorial of ${value} is : ${factorial(value)}`)
+
+

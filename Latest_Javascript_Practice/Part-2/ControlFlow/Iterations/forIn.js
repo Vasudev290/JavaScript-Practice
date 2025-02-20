@@ -1,4 +1,4 @@
-//for-in loop => A loop that iterates, over the properities pf the objects
+//for-in loop => A loop that iterates, over the properities of the objects
 //for in syntex;
 // for (key in object){
      //code block

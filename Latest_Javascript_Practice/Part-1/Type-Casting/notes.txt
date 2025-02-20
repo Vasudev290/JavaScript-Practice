@@ -7,8 +7,9 @@ Implicit Type Conversion (Type Coercion) - Automatically performed by JavaScript
 Explicit Type Conversion (Type Casting) - Manually performed by the programmer using methods or operators.
 
 
- Implicit Type Conversion (Type Coercion)
- JavaScript automatically converts a value from one type to another when needed in operations like arithmetic, logical, or string concatenation.
+Implicit Type Conversion (Type Coercion)
+-------- ------ ------------------------
+JavaScript automatically converts a value from one type to another when needed in operations like arithmetic, logical, or string concatenation.
 
 String to Number (Implicit):
 console.log('5' * 2); // 10 (String '5' is coerced to a Number)
@@ -30,11 +31,13 @@ Logical Coercion:
 console.log('' == false); // true (empty string coerced to false)
 console.log(null == undefined); // true
 
- Explicit Type Conversion (Type Casting)
- Explicit type conversion is when you intentionally convert a value into another type using specific methods or operators.
 
- String Conversion
- When you want to display or concatenate non-string values as strings.
+Explicit Type Conversion (Type Casting)
+--------- --- ------- -------------------
+Explicit type conversion is when you intentionally convert a value into another type using specific methods or operators.
+
+String Conversion
+When you want to display or concatenate non-string values as strings.
 *Using String(value)
 *Using .toString()
 

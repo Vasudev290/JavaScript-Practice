@@ -70,7 +70,7 @@ console.log(weekDay4.getDay());
 
 
 //getHours() → Returns the hour (0-23)
-
+console.log("Hours")
 const hour1 = new Date();
 console.log(hour1.getHours());  
 
@@ -85,6 +85,7 @@ console.log(hour4.getHours());
 
 
 //getMinutes() → Returns the minutes (0-59)
+console.log("Minutes")
 const min1 = new Date();
 console.log(min1.getMinutes());  
 
@@ -99,6 +100,7 @@ console.log(min4.getMinutes());
 
 
 //getSeconds() → Returns the seconds (0-59)
+console.log("Seconds")
 const sec1 = new Date();
 console.log(sec1.getSeconds());  
 
