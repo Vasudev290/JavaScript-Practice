@@ -173,3 +173,30 @@ orderCoffee
 .finally(() => {
     console.log("Thank you for visiting..!🙏🙏")
 })
+
+//EXample -8
+const wait = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve()
+        }, 1000) 
+    })
+}
+wait()
+.then(() => {
+    console.log(3)
+    return wait()
+})
+.then(() => {
+    console.log(2)
+    return wait()
+})
+.then(() => {
+    console.log(1)
+    return wait()
+})
+.then(() => {
+    console.log("Happy New Year!")
+    return wait()
+})
+console.log("The Count begins Nowww!")
