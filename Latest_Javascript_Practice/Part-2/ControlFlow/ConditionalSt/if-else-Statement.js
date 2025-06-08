@@ -14,14 +14,12 @@ if(isAlived){
     console.log("nope..! Is Death person")
 }
 
-
 const number = 20;
 if(number % 2 === 0){
     console.log("Even Number")
 }else{
     console.log("Odd Number")
 }
-
 
 //write a program to check if a number is divisible by 7 or not? 
 let divisible7Num = 70;
@@ -30,7 +28,6 @@ if(divisible7Num % 7 === 0){
 }else{
     console.log(`${divisible7Num} is not divisiable by 7.`)
 }
-
 
 //write a program to check if a number is multiple by 3 or not? 
 let multipleBy3 = 23;
@@ -71,3 +68,6 @@ for(let i=1; i<10; i++){
     }
     console.log(i)
 }
+
+
+

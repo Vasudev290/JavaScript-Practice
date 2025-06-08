@@ -3,23 +3,23 @@
 // *Only Declarations are hoisted, not initialization.
 
 //Example var 
-console.log(a) //undefined
-var a = 10;
+// console.log(a) //undefined
+// var a = 10;
 
-//let
-console.log(b) //ReferenceError: Cannot access 'b' before initialization
-let b = 20;
+// //let
+// console.log(b) //ReferenceError: Cannot access 'b' before initialization
+// let b = 20;
 
-//const
-console.log(c)  //ReferenceError: Cannot access 'b' before initialization
-const c = 29;
+// //const
+// console.log(c)  //ReferenceError: Cannot access 'b' before initialization
+// const c = 29;
 
 
 //Redeclaration & Reassignment in variable of var, let, const
 
 //Redelcaration process
 
-// Using var (Allowed)
+//Using var (Allowed)
 // var x = 10;
 // var x = 20; // Redeclaration is OK
 // console.log(x); // 20
@@ -57,7 +57,7 @@ const c = 29;
 
 //Global scope
 // - Variables declared outside any function blocked global
-let globalVar = "Hii Guys!"
+var globalVar = "Hii Guys!"
 function test(){
     console.log(globalVar) //accessible
 }

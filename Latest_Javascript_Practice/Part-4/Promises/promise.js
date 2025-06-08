@@ -2,7 +2,7 @@
 //*it allow chaining  operations(.then) instead od using neasted callbacks(call back hell)
 //*Async code manner effctciently.
 
-example -1
+//example -1 => Basic Promises concept
 const promises = new Promise((resolve, reject) => {
     let success = true;
     if(success){
@@ -13,7 +13,7 @@ const promises = new Promise((resolve, reject) => {
 })
 promises.then(msg => console.log(msg)).catch(err => console.log(err))
 
-//example -2
+//example -2 
 const data = new Promise((res, rej) => {
     setTimeout(() => {
         const value = "arjun`";

@@ -1,8 +1,10 @@
-two type of datatypes 
+two type of datatypes
+======== == ===========
+
 1, primitive datatype
 2, Non-primitive datatype
 
-Primitive Datatype ; Immutable, stored by value
+Primitive Datatype ; Immutable, stored by stack, copeid by value
 -------------------
 *string
 *number
@@ -12,7 +14,7 @@ Primitive Datatype ; Immutable, stored by value
 *symbal
 *bigint
 
-Non-primitive Datatype ; Mutable, stored by Reference
+Non-primitive Datatype ; Mutable, stored by heap, copeid by reference
 *Object(includes *array and *functions and more)
 
 
@@ -62,12 +64,14 @@ How It Works: Indexed starting from 0.
 let fruits = ["Apple", "Banana", "Cherry"];
 
 
-
 Object - A collection of key-value pairs.
 Where to Use: Represent entities with properties.
+
 
 let person = {
   name: "Alice",
   age: 30,
   isEmployee: true,
 };
+
+

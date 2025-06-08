@@ -55,7 +55,7 @@ function reverseMethod(str){
 }
 console.log(reverseMethod("Hi"))
 
-//with reverse method in numbers
+//without reverse method in numbers
 function reverseNumber(num, rev=0){
     if(num === 0){
         return rev
@@ -64,7 +64,7 @@ function reverseNumber(num, rev=0){
 }
 console.log(reverseNumber(12345670))
 
-//Reverse the Numbers
+//with Reverse the Numbers
 function reverseNumbers(num){
     return num.toString().split('').reverse().join('');
 

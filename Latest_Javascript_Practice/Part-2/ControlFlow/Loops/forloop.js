@@ -1,3 +1,6 @@
+//Loops in programming are control structures that repeat a block of code as long as a specified condition is true. 
+//Think of it like doing something again and again until you're told to stop.
+
 //for loop -> A loops that runs for a specific number of iterations.
 //determind by the -> initialistion, conditions, incr/decr
 

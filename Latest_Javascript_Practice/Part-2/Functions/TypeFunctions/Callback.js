@@ -8,7 +8,6 @@ fetchData((msg) => {
     console.log(msg)
 })
 
-
 //example -2 
 function greet(name, callback){
 console.log(`Hello ${name}`)

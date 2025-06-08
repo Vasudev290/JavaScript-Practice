@@ -1,0 +1,10 @@
+Event loop
+===========
+
+*Call Stack, *web apis, *callback queue, *microtask queue, *Event loop
+
+*call stack -> executes function in a last-in , first-out order.
+*Web apis -> Handles Async task like (setTimeout, DOM APi, fetch, localStorage, console, location)
+*callback queue -> stores functions that need to run after Async task completed.
+*microtask queue -> Handles high - proirity task like Promises.
+Event loop -> Moves tasks from the queue to the call stack, when it's empty.

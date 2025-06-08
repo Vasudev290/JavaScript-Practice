@@ -5,7 +5,7 @@
 // Math.max() and Math.min() help find the largest and smallest numbers in a list.
 
 
-// Math.random() – Generates a Random Number, returns a floating-point number between 0 (inclusive) and 1 (exclusive).
+//Math.random() – Generates a Random Number, returns a floating-point number between 0 (inclusive) and 1 (exclusive).
 console.log("Random()")
 console.log(Math.random())   //0.2773004875062104
 console.log(Math.random() * 10)  //generate 0 to 10 in float method  => 5.506592909903654
@@ -73,3 +73,4 @@ console.log(Math.sqrt(25));  // Output: 5
 console.log(Math.sqrt(100)); // Output: 10
 console.log(Math.sqrt(2));   // Output: 1.414213...
 console.log(Math.sqrt(0));   // Output: 0
+

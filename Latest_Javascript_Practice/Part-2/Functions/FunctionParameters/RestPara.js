@@ -27,7 +27,6 @@ function into(fName, lName, ...hobbies){
     console.log(`Name: ${fName} ${lName}`)
     console.log(`Hobbies : ${hobbies.join(",")}`);
 }
-
 into("Vasu", "Devu", "Codeing", "Reading", "Traveling")
 
 

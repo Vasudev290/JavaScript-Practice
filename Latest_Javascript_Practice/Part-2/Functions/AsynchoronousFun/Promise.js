@@ -62,6 +62,7 @@ multipleValue(5)
 .then(result => console.log("Final Result :", result))
 .catch(err => console.log("Error :", err.name))
 
+
 //example -4
 const p1all = new Promise((resolve, reject) => {
     setTimeout(() => {

@@ -1,0 +1,11 @@
+Sync and Async
+==============
+
+Sync 
+*code executes Sequentionly.
+*Blocks further executions, until the current operation is done.
+
+Async
+*code does not block executions.
+*Handles input/output, API Request, times and databases calls
+*use web apis, Promises and Async/await to manage tasks.

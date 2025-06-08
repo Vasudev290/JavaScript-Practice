@@ -3,12 +3,11 @@ Operators are special symbols or keywords that perform operations on variables o
 They are categorized based on the type of operation they perform.
 
 Arithmetic Operators
-
 let a = 10, b = 3;
 console.log(a + b); // 13
 console.log(a - b); // 7
 console.log(a * b); // 30
-console.log(a / b); // 3.333...
+console.log(a / b); // 3.333
 console.log(a % b); // 1
 console.log(2 ** 3); // 8
 

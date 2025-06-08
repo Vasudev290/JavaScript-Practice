@@ -54,6 +54,7 @@ if(marks <= 95 && marks >= 85){
     console.log("Fail")
 }
 
+
 //Write a program to print the greatest number in given two numbers?
 const num1 = 100;
 const num2 = 20;
@@ -78,7 +79,7 @@ if(val1 > val2){
 }
 
 
-//. Write a program to print the greatest number in given three numbers?
+// Write a program to print the greatest number in given three numbers?
 let player1 = 10, player2 = 20, player3 = 300;
 
 if(player1 >= player2 && player1 >= player3){
