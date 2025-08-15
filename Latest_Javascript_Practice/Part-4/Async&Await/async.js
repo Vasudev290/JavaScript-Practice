@@ -1,5 +1,5 @@
 //Async and Await in JavaScript is used to simplify handling asynchronous operations using promises. 
-//*It allows waiting async code in a sync manner.
+//*It allows writing async code in a sync manner.
 //*It is built on top the of promises but provides a clean syntex.
 
 //example - 1

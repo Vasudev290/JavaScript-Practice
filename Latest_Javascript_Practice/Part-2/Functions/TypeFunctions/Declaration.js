@@ -1,4 +1,5 @@
-//function declaration (Named Function) => A function with a name that can be called anywhere in the script due to hositing.
+//function declaration (Named Function) => 
+// A function with a name that can be called anywhere in the script due to hositing.
 // syntex
 // function greet(){
 //     code block

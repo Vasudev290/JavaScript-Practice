@@ -84,3 +84,22 @@ fetchData1((data) => {
     //console.log(`Data Received :${JSON.stringify(data)}`)
     console.log("Data Recevied :", data)
 })
+
+
+// | Feature     | Callback Function                                           | Higher-Order Function                                        |
+// | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
+// | What is it? | A **function passed** as an argument                        | A **function that receives** or **returns** another function |
+// | Role        | Passed in and **called inside another function**            | The one that **accepts or returns** a function               |
+// | Examples    | `setTimeout()`, `addEventListener()`, `.map()`, `.filter()` | `.map()`, `.filter()`, `middleware`, `currying`, `compose()` |
+// | Analogy     | **The passenger**                                           | **The driver** who takes the passenger or gives you one      |
+
+
+
+// Imagine you go to a restaurant and order a pizza.
+
+// You give your order (function) to the waiter (another function).
+
+// The kitchen will prepare your pizza asynchronously (it takes time).
+
+// You say:
+// 👉 “When the pizza is ready, please call me.”

@@ -14,9 +14,16 @@ Primitive Datatype ; Immutable, stored by stack, copeid by value
 *symbal
 *bigint
 
-Non-primitive Datatype ; Mutable, stored by heap, copeid by reference
-*Object(includes *array and *functions and more)
+let name = "Vasu";
+name[0] = "P"
+console.log(name)  //Vasu
 
+let a = 10;
+let b = a;
+b = 20;
+console.log(a) //10 
+
+===================================================
 
 string - A sequence of characters enclosed in quotes ('', "", or ````).
 Where to Use: Represent text or characters.
@@ -55,16 +62,28 @@ Where to Use: Deliberately indicate "no value."
 let value = null; // Explicitly assigned
 
 
-Non-Primitive Data Types
+Non-primitive Datatype ; Mutable, stored by heap, copeid by reference
+*Object(includes *array and *functions and more)
+Array 
+- An ordered list of values.
+- allowed Duplicate
+- Maintain insertion ordered
+- Indexed collection
+- Can store diffrent data type 
+- provides build in methods
 
-Array - An ordered list of values.
 Where to Use: Store collections of related data.
 How It Works: Indexed starting from 0.
 
 let fruits = ["Apple", "Banana", "Cherry"];
 
 
-Object - A collection of key-value pairs.
+Object 
+- A collection of key-value pairs.-
+- no Duplicate allowed (Keys must be unique.)
+- Can store any Data type
+- Accessing propaerities . and []
+
 Where to Use: Represent entities with properties.
 
 

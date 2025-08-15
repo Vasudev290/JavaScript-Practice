@@ -71,3 +71,7 @@ const numbers2 = [5, 2, 9, 1, 7];
 
 console.log(arraySort(numbers2, ascending));
 console.log(arraySort(numbers2, decending));
+
+
+// Think of a higher-order function as a taxi and a callback function as the passenger.
+// The taxi (HOF) can take a passenger (callback) or drop off a new passenger (returns a function).

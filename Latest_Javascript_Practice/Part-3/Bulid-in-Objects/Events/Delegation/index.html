@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+    <style>
+      button {
+        background-color: lightslategray;
+        color: white;
+        padding: 3px 6px;
+        margin: 2px;
+        cursor: pointer;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 10px;
+        margin: 5px;
+        max-width: 75px;
+        background-color: lightblue;
+        cursor: pointer;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Event Delegations in js</h1>
+    <button id="addItem">Add Item</button>
+    <ul id="itemList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <script>
+      const itemList = document.getElementById("itemList");
+      itemList.addEventListener("click", (event) => {
+        if (event.target.tagName === `LI`) {
+          console.log(`you clicked on element: ${event.target.textContent}`);
+          event.target.style.backgroundColor = "lightgreen";
+        }
+      });
+      const addItemButton = document.getElementById("addItem");
+      addItemButton.addEventListener("click", () => {
+        const newItem = document.createElement("li");
+        newItem.textContent = `Item ${itemList.children.length + 1}`;
+        itemList.appendChild(newItem);
+      });
+    </script>
+  </body>
+</html>

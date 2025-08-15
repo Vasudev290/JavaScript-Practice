@@ -37,9 +37,10 @@ Explicit Type Conversion (Type Casting)
 Explicit type conversion is when you intentionally convert a value into another type using specific methods or operators.
 
 String Conversion
+------ ----------
 When you want to display or concatenate non-string values as strings.
-*Using String(value)
-*Using .toString()
+*Using String(value) => A global function that converts any value to a string. include(null and undefined also)
+*Using .toString() => Cannot be called on null or undefined — will throw an error.
 
 console.log(String(123)); // '123'
 console.log((123).toString()); // '123'
@@ -47,17 +48,28 @@ console.log(String(true)); // 'true'
 
 
 Number Conversion
+------ ----------
 Why use it? When you need numerical operations on string data.
-Using Number(value)
-Using parseInt() or parseFloat() (for strings with numbers)
+Using Number(value) Works with strings, booleans, and other primitives.
 
-console.log(Number('123')); // 123
-console.log(parseInt('123.45')); // 123
-console.log(parseFloat('123.45')); // 123.45
-console.log(Number(true)); // 1
+console.log(Number("123"));    // 123
+console.log(Number("123.45")); // 123.45
+console.log(Number(true));     // 1
+console.log(Number(false));    // 0
+console.log(Number(null));     // 0
+console.log(Number(""));       // 0
+console.log(Number(undefined));// NaN
+
+Using parseInt() or parseFloat() (for strings with numbers)
+console.log(parseInt("123.45")); // 123
+console.log(parseFloat("123.45")); // 123.45
+console.log(parseInt("100px")); // 100
+console.log(parseFloat("100px")); // 100
+console.log(parseInt("abc")); // NaN
 
 
 Boolean Conversion
+------  ----------
 Why use it? To evaluate truthiness or falsiness of a value.
 Using Boolean(value)
 
