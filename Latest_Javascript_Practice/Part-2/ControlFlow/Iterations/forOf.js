@@ -53,3 +53,7 @@ console.log("for-of")
 for(let key of Students){
     console.log(key)
 }
+
+
+console.log("forEach");
+Students.forEach(student => console.log(student))

@@ -66,3 +66,14 @@ function division(a, b){
 let result1 = division(20, 5)
 console.log("Return with arguments")
 console.log(`Division value is ${result1}`)
+
+console.log(sum(2, 3))
+console.log(sum(2)(3))
+function sum(x, y){
+    if(y == undefined){
+        return z => {
+            return z+x
+        }
+    }
+    return x+y
+}
